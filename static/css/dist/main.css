@@ -1,0 +1,54 @@
+.flex {
+  display: flex;
+}
+.frow {
+  display: flex;
+  flex-direction: row;
+}
+.fcol {
+  display: flex;
+  flex-direction: column;
+}
+.center {
+  justify-content: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.wrapper-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+body {
+  background: #364875;
+  background: linear-gradient(180deg, #364875 0%, #000000 100%);
+  background: -moz- linear-gradient(180deg, #364875 0%, #000000 100%);
+  background: -webkit- linear-gradient(180deg, #364875 0%, #000000 100%);
+  min-height: 100vh;
+}
+.full-sep {
+  width: 100vw;
+  height: 5px;
+  background: #dbe5ff;
+  background: -moz- radial-gradient(circle, #dbe5ff 0%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit- radial-gradient(circle, #dbe5ff 0%, rgba(255, 255, 255, 0) 100%);
+  background: radial-gradient(circle, #dbe5ff 0%, rgba(255, 255, 255, 0) 100%);
+}
+.navbar {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #5283d1;
+  background: -moz- radial-gradient(circle, rgba(242, 219, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit- radial-gradient(circle, rgba(242, 219, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  background: radial-gradient(circle, rgba(242, 219, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+}

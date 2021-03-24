@@ -1,0 +1,83 @@
+// Main colors
+@primary: #5283d1;
+@secondary: #7F9CE5;
+@ultra_accents: #E3EBFF;
+@details: #f2dbff;
+@lightblue: rgb(219,229,255);
+@deepblue: rgb(54,72,117);
+@deepbluegrad: linear-gradient(180deg, rgba(54,72,117,1) 0%, rgba(0,0,0,1) 100%);
+@lpgrad: radial-gradient(circle, rgba(242,219,255,0.8) 0%, rgba(255,255,255,0) 100%);
+@lbgrad: radial-gradient(circle, rgba(219,229,255,1) 0%, rgba(255,255,255,0) 100%);
+
+
+
+// Fonts
+@text_font: bold "ubuntu";
+@navlink_font: "acier-bat-solid";
+
+// Fluid vars
+@wfluid: 100vw;
+@hfluid: 100vh;
+
+// Containers rules
+.flex{
+    display: flex;
+}
+.frow{
+    .flex();
+    flex-direction: row;
+}
+.fcol{
+    .flex();
+    flex-direction: column;
+}
+.center{
+    justify-content: center;
+}
+.space-between{
+    justify-content: space-between;
+}
+.space-around{
+    justify-content: space-around;
+}
+
+.wrapper-row{
+    .flex();
+    .frow();
+    .space-around();
+}
+
+//General rules
+    // Body
+    body {
+        background: @deepblue;
+        background: @deepbluegrad;
+        background: -moz-@deepbluegrad;
+        background: -webkit-@deepbluegrad;
+        min-height: @hfluid;
+    }
+    // Separators
+    .full-sep{
+        width: @wfluid;
+        height: 5px;
+        background: @lightblue;
+        background: -moz-@lbgrad;
+        background: -webkit-@lbgrad;
+        background: @lbgrad;
+    }
+
+// Navbar rules
+.navbar{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: @wfluid;
+    height: 50px;
+    .flex();
+    .fcol();
+    .space-between();
+    background: @primary;
+    background: -moz-@lpgrad;
+    background: -webkit-@lpgrad;
+    background: @lpgrad;
+}
