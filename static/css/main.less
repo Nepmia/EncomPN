@@ -6,7 +6,7 @@
 @lightblue: rgb(219,229,255);
 @deepblue: rgb(54,72,117);
 @deepbluegrad: linear-gradient(180deg, rgba(54,72,117,1) 0%, rgba(0,0,0,1) 100%);
-@lpgrad: radial-gradient(circle, rgba(242,219,255,0.8) 0%, rgba(255,255,255,0) 100%);
+@lpgrad: radial-gradient(circle, rgba(242,219,255,0.5) 0%, rgba(255,255,255,0) 100%);
 @lbgrad: radial-gradient(circle, rgba(219,229,255,1) 0%, rgba(255,255,255,0) 100%);
 
 
@@ -44,18 +44,25 @@
 .wrapper-row{
     .flex();
     .frow();
-    .space-around();
+    .space-between();
+}
+.wrapper-col{
+    .flex();
+    .fcol();
+    .center();
 }
 
 //General rules
+
     // Body
-    body {
+    body{
         background: @deepblue;
         background: @deepbluegrad;
         background: -moz-@deepbluegrad;
         background: -webkit-@deepbluegrad;
         min-height: @hfluid;
     }
+
     // Separators
     .full-sep{
         width: @wfluid;
@@ -80,4 +87,18 @@
     background: -moz-@lpgrad;
     background: -webkit-@lpgrad;
     background: @lpgrad;
+}
+.navbar-content{
+    .flex();
+    .frow();
+    .space-between();
+}
+.navbar-sep{
+    height: 5px;
+}
+.navbar-logo{
+    height: 30px;
+}
+.navbar-link{
+    margin: 0px 10px 0px 10px;
 }
