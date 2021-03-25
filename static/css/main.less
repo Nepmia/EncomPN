@@ -9,7 +9,8 @@
 @lpgrad: radial-gradient(circle, rgba(242,219,255,0.5) 0%, rgba(255,255,255,0) 100%);
 @lbgrad: radial-gradient(circle, rgba(219,229,255,1) 0%, rgba(255,255,255,0) 100%);
 
-
+// Transition vars
+@btrans: 0.3s ease;
 
 // Fonts
 @text_font: bold "ubuntu";
@@ -42,12 +43,10 @@
 }
 
 .wrapper-row{
-    .flex();
     .frow();
     .space-between();
 }
 .wrapper-col{
-    .flex();
     .fcol();
     .center();
 }
@@ -60,7 +59,6 @@
         background: @deepbluegrad;
         background: -moz-@deepbluegrad;
         background: -webkit-@deepbluegrad;
-        min-height: @hfluid;
     }
 
     // Separators
@@ -80,7 +78,6 @@
     left: 0%;
     width: @wfluid;
     height: 50px;
-    .flex();
     .fcol();
     .space-between();
     background: @primary;
@@ -89,16 +86,49 @@
     background: @lpgrad;
 }
 .navbar-content{
-    .flex();
     .frow();
     .space-between();
-}
-.navbar-sep{
-    height: 5px;
 }
 .navbar-logo{
     height: 30px;
 }
 .navbar-link{
     margin: 0px 10px 0px 10px;
+    font-family: @navlink_font;
+    font-size: x-large;
+    cursor: pointer;
+    color: @ultra_accents;
+    transition: @btrans;
+    text-shadow: 0px 0px 0px @primary;
+}
+.navbar-link:hover{
+    color: @primary;
+    transition: @btrans;
+    text-shadow: 0px 0px 5px @primary;
+}
+.navbar-item{
+    height: 50px;
+    .fcol();
+    .center;
+    padding: 0px 10px 0px 10px;
+}
+
+
+
+
+
+.navbar-sep{
+    height: 5px;
+    position: absolute;
+    top: 45px;
+    left: 0px;
+}
+
+
+
+
+.elt{
+    width: 50px;
+    height: @hfluid;
+    background-color: @ultra_accents;
 }
