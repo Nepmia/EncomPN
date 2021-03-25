@@ -36,6 +36,11 @@
   background: -webkit- radial-gradient(circle, #dbe5ff 0%, rgba(255, 255, 255, 0) 100%);
   background: radial-gradient(circle, #dbe5ff 0%, rgba(255, 255, 255, 0) 100%);
 }
+.total-sep {
+  width: 100vw;
+  height: 5px;
+  background: #dbe5ff;
+}
 .navbar {
   position: fixed;
   top: 0%;
