@@ -47,7 +47,8 @@
 }
 .uB {
   font-family: "ubuntu";
-  font-weight: 400;
+  font-variant: bold;
+  font-weight: 800;
   color: #E3EBFF;
 }
 .navbar {
