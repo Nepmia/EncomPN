@@ -47,7 +47,6 @@
 }
 .uB {
   font-family: "ubuntu";
-  font-variant: bold;
   font-weight: 800;
   color: #E3EBFF;
 }
@@ -148,6 +147,7 @@
 }
 .foot-text {
   align-self: center;
+  opacity: 0.5;
 }
 .foot-logo {
   height: 3vh;
