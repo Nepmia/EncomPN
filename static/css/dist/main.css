@@ -45,6 +45,9 @@
   font-family: "acier-bat-solid";
   font-size: x-large;
 }
+.uB {
+  font: bold "ubuntu";
+}
 .navbar {
   position: fixed;
   top: 0%;
