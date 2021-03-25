@@ -41,6 +41,10 @@
   height: 0.5vh;
   background: #dbe5ff;
 }
+.ab {
+  font-family: "acier-bat-solid";
+  font-size: x-large;
+}
 .navbar {
   position: fixed;
   top: 0%;
@@ -72,8 +76,6 @@
 }
 .navbar-link {
   margin: 0px 10px 0px 10px;
-  font-family: "acier-bat-solid";
-  font-size: x-large;
   cursor: pointer;
   color: #E3EBFF;
   transition: 0.3s ease;
