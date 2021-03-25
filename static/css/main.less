@@ -140,16 +140,21 @@ footer{
     left: 0px;
     top: 90vh;
     z-index: 500;
+    .fcol();
+    .space-between();
+}
+.foot-bg{
     background: @primary;
     background: -moz-@lpgrad;
     background: -webkit-@lpgrad;
     background: @lpgrad;
     width: @wfluid;
     height: @hfluid - 95;
+    order: 2;
 }
 .foot-floor{
-    position: absolute;
     top: -5vh;
+    order: 1;
 }
 .foot-sep{
     position: absolute;
