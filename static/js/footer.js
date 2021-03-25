@@ -4,3 +4,6 @@ function footerPlacer() {
     $(".foot").css("top", footer_pos + "px");
 }
 
+footerPlacer();
+
+window.onresize = footerPlacer;
