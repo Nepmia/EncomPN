@@ -46,7 +46,9 @@
   font-size: x-large;
 }
 .uB {
-  font: bold "ubuntu";
+  font-family: "ubuntu";
+  font-weight: 400;
+  color: #E3EBFF;
 }
 .navbar {
   position: fixed;

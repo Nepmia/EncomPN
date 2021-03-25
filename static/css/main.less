@@ -13,7 +13,7 @@
 @btrans: 0.3s ease;
 
 // Fonts
-@text_font: bold "ubuntu";
+@text_font: "ubuntu";
 @navlink_font: "acier-bat-solid";
 
 // Fluid vars
@@ -73,7 +73,9 @@
         font-size: x-large;
     }
     .uB{
-        font: @text_font;
+        font-family: @text_font;
+        font-weight: 400;
+        color: @ultra_accents;
     }
     .uL{
 
