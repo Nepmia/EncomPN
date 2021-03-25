@@ -7,7 +7,8 @@ function footerPlacer() {
     console.log("page_h=" + page);
     console.log("footer_h=" + footer);
 }
-
-footerPlacer();
+$(document).ready(() =>{
+    footerPlacer();
+})
 
 window.onresize = footerPlacer;
