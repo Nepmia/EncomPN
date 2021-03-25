@@ -28,12 +28,6 @@
   flex-direction: column;
   justify-content: center;
 }
-body {
-  background: #364875;
-  background: linear-gradient(180deg, #364875 0%, #000000 100%);
-  background: -moz- linear-gradient(180deg, #364875 0%, #000000 100%);
-  background: -webkit- linear-gradient(180deg, #364875 0%, #000000 100%);
-}
 .full-sep {
   width: 100vw;
   height: 5px;
@@ -106,4 +100,8 @@ body {
   height: 100vh;
   top: 0%;
   left: 0%;
+  background: #364875;
+  background: linear-gradient(180deg, #364875 0%, #000000 100%);
+  background: -moz- linear-gradient(180deg, #364875 0%, #000000 100%);
+  background: -webkit- linear-gradient(180deg, #364875 0%, #000000 100%);
 }
