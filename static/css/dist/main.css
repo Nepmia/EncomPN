@@ -63,6 +63,7 @@ body {
 }
 .navbar-logo {
   height: 30px;
+  fill: #E3EBFF;
 }
 .navbar-link {
   margin: 0px 10px 0px 10px;
