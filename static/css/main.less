@@ -125,9 +125,9 @@
 .page-content{
     position: absolute;
     width: @wfluid;
-    height: @hfluid;
-    top: 0%;
-    left: 0%;
+    min-height: @hfluid - 10;
+    top: 0px;
+    left: 0px;
     background: @deepblue;
     background: @deepbluegrad;
     background: -moz-@deepbluegrad;
@@ -135,3 +135,9 @@
 }
 
 // Footer rules
+footer{
+    position: relative;
+    left: 0px;
+    top: 90vh;
+    z-index: 500;
+}

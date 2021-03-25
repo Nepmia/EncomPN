@@ -97,11 +97,17 @@
 .page-content {
   position: absolute;
   width: 100vw;
-  height: 100vh;
-  top: 0%;
-  left: 0%;
+  min-height: 90vh;
+  top: 0px;
+  left: 0px;
   background: #364875;
   background: linear-gradient(180deg, #364875 0%, #000000 100%);
   background: -moz- linear-gradient(180deg, #364875 0%, #000000 100%);
   background: -webkit- linear-gradient(180deg, #364875 0%, #000000 100%);
+}
+footer {
+  position: relative;
+  left: 0px;
+  top: 90vh;
+  z-index: 500;
 }
