@@ -64,6 +64,11 @@ body {
 .navbar-logo {
   height: 30px;
   fill: #E3EBFF;
+  transition: 0.3s ease;
+}
+.navbar-logo:hover {
+  fill: #5283d1;
+  transition: 0.3s ease;
 }
 .navbar-link {
   margin: 0px 10px 0px 10px;
