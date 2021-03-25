@@ -99,8 +99,10 @@ body {
 .scrollFix {
   margin-right: 20px;
 }
-.elt {
-  width: 50px;
+.page-content {
+  width: 100vw;
   height: 100vh;
   background-color: #E3EBFF;
+  top: 0%;
+  left: 0%;
 }
