@@ -1,6 +1,7 @@
 // Fluid vars
 @wfluid: 100vw;
 @hfluid: 100vh;
+@wktuhack: calc(100vw - (100vw - 100%));
 
 // Containers rules
 .flex {
@@ -38,7 +39,22 @@
     .fcol();
     .center();
 }
-body
-{
+body{
     overflow-y : scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
 }
+body::-webkit-scrollbar {
+    width: 12px;          
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: @deepblue;     
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: @ultra_accents;  
+    border-radius: 20px;      
+    border: 3px solid @deepblue;  
+  }
