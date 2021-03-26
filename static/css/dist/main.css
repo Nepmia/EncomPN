@@ -79,14 +79,14 @@
   fill: #5283d1;
   transition: 0.3s ease;
 }
-.navbar-link {
+.nav-link {
   margin: 0px 10px 0px 10px;
   cursor: pointer;
   color: #E3EBFF;
   transition: 0.3s ease;
   text-shadow: 0px 0px 0px #5283d1;
 }
-.navbar-link:hover {
+.nav-link:hover {
   color: #5283d1;
   transition: 0.3s ease;
   text-shadow: 0px 0px 5px #5283d1;
