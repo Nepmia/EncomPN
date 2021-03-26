@@ -1,3 +1,12 @@
+.ab {
+  font-family: "acier-bat-solid";
+  font-size: x-large;
+}
+.uB {
+  font-family: "ubuntu";
+  font-weight: 800;
+  color: #E3EBFF;
+}
 .flex {
   display: flex;
 }
@@ -41,15 +50,6 @@
   height: 0.5vh;
   background: #dbe5ff;
 }
-.ab {
-  font-family: "acier-bat-solid";
-  font-size: x-large;
-}
-.uB {
-  font-family: "ubuntu";
-  font-weight: 800;
-  color: #E3EBFF;
-}
 .hidden {
   opacity: 0 !important;
   pointer-events: none;
@@ -65,26 +65,16 @@
 .cp {
   cursor: pointer;
 }
-@media screen and (max-width: 800px) {
-  .navbar-links {
-    display: none;
-  }
-  .foot-bg {
-    transform: scale(0, 1);
-  }
-  .foot-logo,
-  .foot-text {
-    display: none;
-  }
-  .foot-sep,
-  .foot-floor {
-    transform: translateY(5vh);
-  }
-}
-@media screen and (min-width: 800px) {
-  .navbar-ham {
-    display: none;
-  }
+.page-content {
+  position: absolute;
+  width: 100vw;
+  min-height: 100vh;
+  top: 0px;
+  left: 0px;
+  background: #364875;
+  background: linear-gradient(180deg, #364875 0%, #000000 100%);
+  background: -moz- linear-gradient(180deg, #364875 0%, #000000 100%);
+  background: -webkit- linear-gradient(180deg, #364875 0%, #000000 100%);
 }
 .navbar {
   position: fixed;
@@ -204,17 +194,6 @@
   transform: translateY(-50px);
   transition: 0.3s ease;
 }
-.page-content {
-  position: absolute;
-  width: 100vw;
-  min-height: 100vh;
-  top: 0px;
-  left: 0px;
-  background: #364875;
-  background: linear-gradient(180deg, #364875 0%, #000000 100%);
-  background: -moz- linear-gradient(180deg, #364875 0%, #000000 100%);
-  background: -webkit- linear-gradient(180deg, #364875 0%, #000000 100%);
-}
 .foot {
   position: absolute;
   top: 0px;
@@ -253,4 +232,25 @@
   transition: 0.3s ease;
   height: 20px;
   fill: #E3EBFF;
+}
+@media screen and (max-width: 800px) {
+  .navbar-links {
+    display: none;
+  }
+  .foot-bg {
+    transform: scale(0, 1);
+  }
+  .foot-logo,
+  .foot-text {
+    display: none;
+  }
+  .foot-sep,
+  .foot-floor {
+    transform: translateY(5vh);
+  }
+}
+@media screen and (min-width: 800px) {
+  .navbar-ham {
+    display: none;
+  }
 }
