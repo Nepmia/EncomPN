@@ -150,6 +150,7 @@
     color: @ultra_accents;
     transition: @btrans;
     text-shadow: 0px 0px 0px @primary;
+    align-self: center;
 }
 .nav-link:hover{
     color: @primary;
@@ -171,6 +172,51 @@
 .scrollFix{
     margin-right: 20px;
 }
+
+// Side nav rules
+.sidenav{
+    .wrapper-col();
+    width: @wfluid;
+    height: 50px;
+    position: fixed;
+    z-index: 1001;
+    top: 0px;
+    right: 0px;
+    background-color: @deepblue;
+}
+
+.sidenav-wrapper{
+    width: @wfluid;
+}
+
+.sidenav-container{
+    
+    height: 100%;
+    width: 50%;
+}
+
+.sidenav-noInt{
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 999;
+    height: @hfluid;
+    width: @wfluid;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#side-cross{
+    height: 30px;
+    width: 30px;
+    padding-right: 10px;
+    fill: @ultra_accents;
+    transition: @btrans;
+}
+#side-cross:hover{
+    fill: tomato;
+    transition: @btrans;
+}
+
 
 // Page content rules
 .page-content{
