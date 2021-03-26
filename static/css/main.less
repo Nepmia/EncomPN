@@ -81,6 +81,27 @@
 
     }
 
+
+// Media queries
+@media screen and (max-width: 800px) {
+    .navbar-links{
+        display: none;
+    }
+    .navbar-ham{
+        display: block;
+    }
+}
+@media screen and (min-width: 800px) {
+    .navbar-ham{
+        display: none;
+    }
+    .navbar-links{
+        display: block;
+    }
+}
+
+
+
 // Navbar rules
 .navbar{
     position: fixed;
@@ -183,6 +204,6 @@
     opacity: 0.5;
 }
 .foot-logo{
-    height: 3vh;
+    height: 20px;
     fill: @ultra_accents;
 }

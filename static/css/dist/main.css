@@ -50,6 +50,22 @@
   font-weight: 800;
   color: #E3EBFF;
 }
+@media screen and (max-width: 800px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-ham {
+    display: block;
+  }
+}
+@media screen and (min-width: 800px) {
+  .navbar-ham {
+    display: none;
+  }
+  .navbar-links {
+    display: block;
+  }
+}
 .navbar {
   position: fixed;
   top: 0%;
@@ -150,6 +166,6 @@
   opacity: 0.5;
 }
 .foot-logo {
-  height: 3vh;
+  height: 20px;
   fill: #E3EBFF;
 }
