@@ -87,12 +87,14 @@
     .navbar-links{
         display: none;
     }
-    .foot{
-        transform: translateY(5vh);
+    .foot-bg{
+        transform: scale(0,1);
     }
     .foot-logo, .foot-text{
-        opacity: 0 !important;
-        pointer-events: none;
+        display: none;
+    }
+    .foot-sep, .foot-floor{
+        transform: translateY(5vh);
     }
 }
 @media screen and (min-width: 800px) {
@@ -196,13 +198,14 @@
 }
 
 .sidenav-noInt{
-    top: 0px;
-    left: 0px;
+    top: 0vh;
+    left: 0vw;
     position: fixed;
     z-index: 999;
     height: @hfluid;
     width: @wfluid;
     background-color: rgba(0,0,0,0.5);
+    pointer-events: none;
 }
 
 #side-cross{
