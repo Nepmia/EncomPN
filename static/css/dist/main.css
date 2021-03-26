@@ -51,11 +51,11 @@
   color: #E3EBFF;
 }
 .hidden {
-  opacity: 0;
+  opacity: 0 !important;
   pointer-events: none;
 }
 .visible {
-  opacity: 1;
+  opacity: 1 !important;
 }
 .none {
   display: none;
@@ -178,6 +178,7 @@
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
+  opacity: 0;
 }
 #side-cross {
   height: 30px;
