@@ -53,12 +53,17 @@
 .hidden {
   opacity: 0 !important;
   pointer-events: none;
+  transition: 0.3s ease;
 }
 .visible {
   opacity: 1 !important;
+  transition: 0.3s ease;
 }
 .none {
   display: none;
+}
+.cp {
+  cursor: pointer;
 }
 @media screen and (max-width: 800px) {
   .navbar-links {
