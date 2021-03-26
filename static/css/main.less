@@ -115,15 +115,28 @@
     .frow();
     .space-between();
 }
-.navbar-logo, .navbar-ham{
+.navbar-logo{
     height: 30px;
     fill: @ultra_accents;
     transition: @btrans;
 }
-.navbar-ham, .navbar-logo:hover{
+.navbar-logo:hover{
     fill: @primary;
     transition: @btrans;
 }
+#navbar-ham{
+    height: 30px;
+    transition: @btrans;
+    stroke:@ultra_accents;
+    stroke-linecap:round;
+    stroke-miterlimit:10;
+    stroke-width:40px;
+}
+#navbar-ham:hover{
+    stroke:@primary;
+    transition: @btrans;
+}
+
 .nav-link{
     margin: 0px 10px 0px 10px;
     cursor: pointer;

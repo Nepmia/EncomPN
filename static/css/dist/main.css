@@ -80,15 +80,25 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.navbar-logo,
-.navbar-ham {
+.navbar-logo {
   height: 30px;
   fill: #E3EBFF;
   transition: 0.3s ease;
 }
-.navbar-ham,
 .navbar-logo:hover {
   fill: #5283d1;
+  transition: 0.3s ease;
+}
+#navbar-ham {
+  height: 30px;
+  transition: 0.3s ease;
+  stroke: #E3EBFF;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 40px;
+}
+#navbar-ham:hover {
+  stroke: #5283d1;
   transition: 0.3s ease;
 }
 .nav-link {
