@@ -16,7 +16,7 @@ $(document).ready(() => {
 function sideNav (status){
     if (status == "on") {
         $(".sidenav").addClass("sideOn").removeClass("sideOff");
-        $(".sidenav-noInt").removeClass("none").addClass("visible");
+        $(".sidenav-noInt").removeClass("none").removeClass("hidden").addClass("visible");
     }
     else {
         $(".sidenav").addClass("sideOff").removeClass("sideOn");
