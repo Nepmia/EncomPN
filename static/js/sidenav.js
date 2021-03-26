@@ -3,6 +3,14 @@ $(document).ready(() => {
     $(".navbar-ham").click(() =>{
         sideNav("on")
     });
+
+    $(".sidenav-closeBtn").click(() =>{
+        sideNav("off")
+    });
+
+    $(".sidenav-noInt").click(() =>{
+        sideNav("off")
+    });
 });
 
 function sideNav (status){
