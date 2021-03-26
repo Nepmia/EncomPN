@@ -50,6 +50,16 @@
   font-weight: 800;
   color: #E3EBFF;
 }
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.visible {
+  opacity: 1;
+}
+.none {
+  display: none;
+}
 @media screen and (max-width: 800px) {
   .navbar-links {
     display: none;
@@ -178,6 +188,14 @@
 }
 #side-cross:hover {
   fill: tomato;
+  transition: 0.3s ease;
+}
+.sideOn {
+  transform: translateY(0px);
+  transition: 0.3s ease;
+}
+.sideOff {
+  transform: translateY(-50px);
   transition: 0.3s ease;
 }
 .page-content {
