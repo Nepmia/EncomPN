@@ -54,6 +54,14 @@
   .navbar-links {
     display: none;
   }
+  .foot {
+    transform: translateY(5vh);
+  }
+  .foot-logo,
+  .foot-text {
+    opacity: 0 !important;
+    pointer-events: none;
+  }
 }
 @media screen and (min-width: 800px) {
   .navbar-ham {
@@ -147,6 +155,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.3s ease;
 }
 .foot-bg {
   background: #5283d1;
@@ -168,10 +177,12 @@
   padding: 0px 10px 0px 10px;
 }
 .foot-text {
+  transition: 0.3s ease;
   align-self: center;
   opacity: 0.5;
 }
 .foot-logo {
+  transition: 0.3s ease;
   height: 20px;
   fill: #E3EBFF;
 }
