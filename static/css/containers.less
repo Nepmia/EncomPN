@@ -1,0 +1,40 @@
+// Fluid vars
+@wfluid: 100vw;
+@hfluid: 100vh;
+
+// Containers rules
+.flex {
+    display: flex;
+}
+
+.frow {
+    .flex();
+    flex-direction: row;
+}
+
+.fcol {
+    .flex();
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.wrapper-row {
+    .frow();
+    .space-between();
+}
+
+.wrapper-col {
+    .fcol();
+    .center();
+}

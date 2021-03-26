@@ -1,0 +1,56 @@
+// Side nav rules
+.sidenav {
+    .wrapper-col();
+    width: @wfluid;
+    height: 50px;
+    position: fixed;
+    z-index: 1001;
+    top: 0px;
+    right: 0px;
+    background-color: @deepblue;
+}
+
+.sidenav-wrapper {
+    width: @wfluid;
+}
+
+.sidenav-container {
+
+    height: 100%;
+    width: 50%;
+}
+
+.sidenav-noInt {
+    top: 0vh;
+    left: 0vw;
+    position: fixed;
+    z-index: 999;
+    height: @hfluid;
+    width: @wfluid;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: all;
+    opacity: 0;
+}
+
+#side-cross {
+    height: 30px;
+    width: 30px;
+    padding-right: 10px;
+    fill: @ultra_accents;
+    transition: @btrans;
+}
+
+#side-cross:hover {
+    fill: tomato;
+    transition: @btrans;
+}
+
+.sideOn {
+    transform: translateY(0px);
+    transition: @btrans;
+}
+
+.sideOff {
+    transform: translateY(-50px);
+    transition: @btrans;
+}
