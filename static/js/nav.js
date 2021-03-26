@@ -43,14 +43,14 @@ $(document).ready(function() {
           if (new_scroll > saved_scroll){
               if ( new_scroll > 95){
                 toggleNavbar("off");
-                $(".navbar").addClass("off");  
+                $(".navbar").removeClass("toggled");  
               } else {
                   // pass
               }
             saved_scroll = new_scroll;
           } else {
             toggleNavbar("on");
-            $(".navbar").addClass("on");
+            $(".navbar").addClass("toggled");
             saved_scroll = new_scroll;
           }
     });
@@ -58,7 +58,11 @@ $(document).ready(function() {
     $(".navbar").hover(function(){
       toggleNavbar("on");
     }, function(){
-      toggleNavbar("off");
+        if ($(".navbar").hasClass("toggled")){
+            // pass
+        } else {
+            toggleNavbar("off");
+        }
     });
 });
 
