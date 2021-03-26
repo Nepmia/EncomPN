@@ -4,3 +4,9 @@ function sideNav (status){
         $(".sidenav-noInt").removeClass("none").addClass("visible");
     }
 }
+
+$(document).ready(() => {
+    $(".navbar-ham").click(() =>{
+        sideNav("on")
+    });
+});
