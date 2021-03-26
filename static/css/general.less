@@ -1,0 +1,52 @@
+//General rules
+
+// Separators
+.full-sep {
+    width: @wfluid;
+    height: 0.5vh;
+    background: @lightblue;
+    background: -moz-@lbgrad;
+    background: -webkit-@lbgrad;
+    background: @lbgrad;
+}
+
+.total-sep {
+    width: @wfluid;
+    height: 0.5vh;
+    background: @lightblue;
+}
+
+
+
+// Opacity rules
+.hidden {
+    opacity: 0 !important;
+    pointer-events: none;
+    transition: @btrans;
+}
+.visible {
+    opacity: 1 !important;
+    transition: @btrans;
+}
+.none {
+    display: none;
+}
+
+// Pointer rules
+.cp{
+    cursor: pointer;
+}
+
+
+// Page content rules
+.page-content {
+    position: absolute;
+    width: @wfluid;
+    min-height: @hfluid;
+    top: 0px;
+    left: 0px;
+    background: @deepblue;
+    background: @deepbluegrad;
+    background: -moz-@deepbluegrad;
+    background: -webkit-@deepbluegrad;
+}
