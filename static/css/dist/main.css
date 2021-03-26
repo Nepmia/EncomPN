@@ -54,16 +54,10 @@
   .navbar-links {
     display: none;
   }
-  .navbar-ham {
-    display: block;
-  }
 }
 @media screen and (min-width: 800px) {
   .navbar-ham {
     display: none;
-  }
-  .navbar-links {
-    display: flex;
   }
 }
 .navbar {
@@ -86,11 +80,13 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.navbar-logo {
+.navbar-logo,
+.navbar-ham {
   height: 30px;
   fill: #E3EBFF;
   transition: 0.3s ease;
 }
+.navbar-ham,
 .navbar-logo:hover {
   fill: #5283d1;
   transition: 0.3s ease;

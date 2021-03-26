@@ -87,16 +87,10 @@
     .navbar-links{
         display: none;
     }
-    .navbar-ham{
-        display: block;
-    }
 }
 @media screen and (min-width: 800px) {
     .navbar-ham{
         display: none;
-    }
-    .navbar-links{
-        display: flex;
     }
 }
 
@@ -121,12 +115,12 @@
     .frow();
     .space-between();
 }
-.navbar-logo{
+.navbar-logo, .navbar-ham{
     height: 30px;
     fill: @ultra_accents;
     transition: @btrans;
 }
-.navbar-logo:hover{
+.navbar-ham, .navbar-logo:hover{
     fill: @primary;
     transition: @btrans;
 }
