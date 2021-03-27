@@ -25,7 +25,6 @@ function changePage(newPage){
     $("." + newPage).addClass("active");
 };
 function contentUnload(newPage){
-    $("footer").addClass("hidden");
     $(".content").addClass("cOff");
     setTimeout(() => {
         $(".page-content").empty();
@@ -35,11 +34,11 @@ function contentUnload(newPage){
 function loadContent(newPage){
     var newPath = "/template/" + newPage + ".html";
     $(".page-content").load( newPath );
-    $("footer").removeClass("hidden");
 };
 function navSwitch(newPage){
     changePage(newPage);
     contentUnload(newPage);
+    footerPlacer();
 };
 function navCheck(){
     var newPage = window.location.hash;
