@@ -31,7 +31,7 @@ function contentUnload(newPage){
 };
 function loadContent(newPage){
     var newPath = "/template/" + newPage + ".html";
-    $(".page-content").load( newPath  + " div.page-content");
+    $(".page-content").load( newPath );
     $("footer").removeClass("hidden");
 };
 function navSwitch(newPage){
