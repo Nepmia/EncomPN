@@ -19,6 +19,8 @@ function changePage(newPage){
     });
     document.title = newTitle;
     window.location.hash = newPage;
+    $(".pageChanger").removeClass("active");
+    $("." + newPage).addClass("active");
 };
 function contentUnload(newPage){
     $("footer").addClass("hidden");
