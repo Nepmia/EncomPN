@@ -36,7 +36,8 @@ function navSwitch(newPage){
 };
 function navCheck(){
     var newPage = window.location.hash;
-    navSwitch(newPage);
+    var page = newPage.replace("#", "");
+    navSwitch(page);
     console.log("hash changed")
 }
 
