@@ -38,6 +38,7 @@ function loadContent(newPage){
 function navSwitch(newPage){
     changePage(newPage);
     contentUnload(newPage);
+    sideNav("off");
 };
 function navCheck(){
     var newPage = window.location.hash;
