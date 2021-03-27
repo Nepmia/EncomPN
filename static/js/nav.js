@@ -30,13 +30,13 @@ function contentUnload(newPage){
     setTimeout(() => {
         $(".page-content").empty();
         loadContent(newPage);
+        $(".content").removeClass("cOff");
     },300);
 };
 function loadContent(newPage){
     var newPath = "/template/" + newPage + ".html";
     $(".page-content").load( newPath );
     $("footer").removeClass("hidden");
-    $(".content").removeClass("cOff");
 };
 function navSwitch(newPage){
     changePage(newPage);
@@ -46,7 +46,6 @@ function navCheck(){
     var newPage = window.location.hash;
     var page = newPage.replace("#", "");
     navSwitch(page);
-    console.log("hash changed")
 }
 
 
