@@ -8,4 +8,9 @@ $(document).ready(() =>{
     footerPlacer(); // Calculate when page loads
 })
 
-window.onresize = footerPlacer; // Listen for page resize so we can re-calculate the footer pos
+$(window).resize(() =>{ // Listen for page resize so we can re-calculate the footer pos
+    footerPlacer();
+    setTimeout(() =>{ // Just a timeout to be sure the window has correctly maximized 
+      footerPlacer();   
+    }, 300)
+})
