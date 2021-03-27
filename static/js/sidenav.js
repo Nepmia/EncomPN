@@ -1,5 +1,5 @@
 
-$(document).ready(() => {
+$(document).ready(() => { // Basic function that enable and disable the sidenav on btn clicks
     $(".navbar-ham").click(() =>{
         sideNav("on")
     });
