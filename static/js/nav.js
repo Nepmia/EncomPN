@@ -30,7 +30,6 @@ function contentUnload(newPage){
     setTimeout(() => {
         $(".page-content").empty();
         loadContent(newPage);
-        $(".content").removeClass("cOff");
     },300);
 };
 function loadContent(newPage){
@@ -63,4 +62,9 @@ function toggleNavbar(status){
   } else {
     $(".navbar").css("transform", "translateY(-50px)");
   } 
+}
+function animateLoad(){
+    setTimeout(() =>{
+        $(".content").removeClass("cStand")
+    },10)
 }
