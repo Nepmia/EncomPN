@@ -11,6 +11,8 @@ $(document).ready(() => {
         changePage(newPage);
         $(".navbar").addClass("toggled");
     });
+
+    navCheck();
 });
 function changePage(newPage){
     var newTitle = eval("titles." + newPage);
