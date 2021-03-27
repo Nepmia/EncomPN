@@ -38,7 +38,6 @@ function loadContent(newPage){
 function navSwitch(newPage){
     changePage(newPage);
     contentUnload(newPage);
-    footerPlacer();
 };
 function navCheck(){
     var newPage = window.location.hash;
