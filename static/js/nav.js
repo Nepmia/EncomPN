@@ -26,6 +26,7 @@ function changePage(newPage){
 };
 function contentUnload(newPage){
     $("footer").addClass("hidden");
+    $(".page-content").addClass("cOff");
     setTimeout(() => {
         $(".page-content").empty();
         loadContent(newPage);
@@ -35,6 +36,7 @@ function loadContent(newPage){
     var newPath = "/template/" + newPage + ".html";
     $(".page-content").load( newPath );
     $("footer").removeClass("hidden");
+    $(".page-content").removeClass("cOff");
 };
 function navSwitch(newPage){
     changePage(newPage);
