@@ -9,12 +9,15 @@ $(document).ready(() => {
     $(".pageChanger").click(function() {
         var newPage = $(this).attr("page");
         changePage(newPage);
+        $(".navbar").addClass("toggled");
     });
 });
 function changePage(newPage){
     var newTitle = eval("titles." + newPage);
+    $('html,body').animate({ scrollTop: 0 }, 'slow', () => {
+        saved_scroll = 0;
+    });
     document.title = newTitle;
-    saved_scroll = 0;
     window.location.hash = newPage;
 };
 function contentUnload(newPage){
@@ -30,7 +33,6 @@ function loadContent(newPage){
     $("footer").removeClass("hidden");
 };
 function navSwitch(newPage){
-    $('html,body').animate({ scrollTop: 0 }, 'slow');
     changePage(newPage);
     contentUnload(newPage);
 };
