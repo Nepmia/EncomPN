@@ -14,7 +14,7 @@ $(document).ready(() => {
 });
 function changePage(newPage){
     var newTitle = eval("titles." + newPage);
-    $('html,body').animate({ scrollTop: 0 }, 'slow', () => {
+    $('html,body').animate({ scrollTop: 0 }, "fast", () => {
         saved_scroll = 0;
     });
     document.title = newTitle;
