@@ -8,9 +8,7 @@ const titles = {
 $(document).ready(() => {
     $(".pageChanger").click(function() {
         var newPage = $(this).attr("page");
-        $('html,body').animate({ scrollTop: 0 }, 'slow');
         changePage(newPage);
-        contentUnload(newPage);
     });
 });
 function changePage(newPage){
@@ -27,19 +25,25 @@ function contentUnload(newPage){
     },300);
 };
 function loadContent(newPage){
-    var thisUrl = window.location.origin;
-    var newUrl = thisUrl + "/template/" + newPage;
-    // $(".page-content").load( newUrl + " div.page-content");
+    var newPath = "/template/" + newPage + ".html";
+    $(".page-content").load( newPath  + " div.page-content");
     $("footer").removeClass("hidden");
+};
+function navSwitch(newPage){
+    $('html,body').animate({ scrollTop: 0 }, 'slow');
+    changePage(newPage);
+    contentUnload(newPage);
 };
 function navCheck(){
     var newPage = window.location.hash;
-    navSwitch(newPage)
-};
+    navSwitch(newPage);
+    console.log("hash changed")
+}
 
 
-
-window.onhashchange = navCheck;
+window.addEventListener('hashchange', function() {
+    navCheck();
+}, false);
 
 
 
