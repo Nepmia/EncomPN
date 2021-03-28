@@ -20,9 +20,12 @@
 </div>
 
 <script>
+    clearTimeout(pageLoadInstance);
+    var pageLoadInstance;
+
     animateLoad();
-    setTimeout(() =>{
-        eContainerPop();
-        footerPlacer();
-    },100);
+    pageLoadInstance = setTimeout(() =>{
+                            eContainerPop();
+                            footerPlacer();
+                        },100);
 </script>

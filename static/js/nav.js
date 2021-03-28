@@ -1,4 +1,5 @@
-/* Page Navigation */
+var navLoadInstance;
+
 const titles = {
     home: "Home - EncomPN",
     demo: "Demo - EncomPN",
@@ -7,6 +8,10 @@ const titles = {
 
 $(document).ready(() => {
     $(".pageChanger").click(function() {
+        clearTimeout(navTimeoutInstance);
+        clearTimeout(navLoadInstance);
+        navTimeoutInstance = null;
+        navLoadInstance = null;
         var newPage = $(this).attr("page");
         changePage(newPage);
         $(".navbar").addClass("toggled");
@@ -30,10 +35,10 @@ function changePage(newPage){
 };
 function contentUnload(newPage){
     $(".content").addClass("cOff");
-    setTimeout(() => {
-        $(".page-content").empty();
-        loadContent(newPage);
-    },300);
+    navLoadInstance = setTimeout(() => {
+                            $(".page-content").empty();
+                            loadContent(newPage);
+                        },300);
 };
 function loadContent(newPage){
     var newPath = "/template/" + newPage + ".html";
@@ -45,6 +50,10 @@ function navSwitch(newPage){
     sideNav("off");
 };
 function navCheck(){
+    clearTimeout(navTimeoutInstance);
+    clearTimeout(navLoadInstance);
+    navTimeoutInstance = null;
+    navLoadInstance = null;
     var newPage = window.location.hash;
     var page = newPage.replace("#", "");
     if (page in titles) {
