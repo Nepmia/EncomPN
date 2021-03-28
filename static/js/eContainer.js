@@ -1,6 +1,6 @@
-var navTimeoutInstance;
+var eContainerInstance;
 function eContainerPop(){
-    navTimeoutInstance = $(".ec-frame").removeClass("eCoff");
+    eContainerInstance = $(".ec-frame").removeClass("eCoff");
                             setTimeout(() => {
                                 $(".ec-c").removeClass("eC-c-off");
                                 setTimeout(() =>{
