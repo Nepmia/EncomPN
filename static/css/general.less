@@ -24,16 +24,18 @@
     pointer-events: none;
     transition: @btrans;
 }
+
 .visible {
     opacity: 1 !important;
     transition: @btrans;
 }
+
 .none {
     display: none;
 }
 
 // Pointer rules
-.cp{
+.cp {
     cursor: pointer;
 }
 
@@ -50,16 +52,21 @@
     background: -moz-@deepbluegrad;
     background: -webkit-@deepbluegrad;
 }
-.content{
+
+.content {
     transition: @btrans;
+    height: 100%;
+    width: 100%;
+    padding-top: 60px;
 }
 
-.cOff{
+.cOff {
     transition: @btrans;
     transform: scale(0.9);
     opacity: 0;
 }
-.cStand{
+
+.cStand {
     transition: @btrans;
     transform: translateY(20px);
     opacity: 0;

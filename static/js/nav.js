@@ -15,14 +15,18 @@ $(document).ready(() => {
     navCheck();
 });
 function changePage(newPage){
-    var newTitle = eval("titles." + newPage);
+    $(".pageChanger").removeClass("active");
+    if (newPage != "404") {
+       var newTitle = eval("titles." + newPage);
+       $("." + newPage).addClass("active");
+       document.title = newTitle; 
+    } else {
+        document.title = "Error 404 - EncomPN"; 
+    }
     $('html,body').animate({ scrollTop: 0 }, "fast", () => {
         saved_scroll = 0;
     });
-    document.title = newTitle;
     window.location.hash = newPage;
-    $(".pageChanger").removeClass("active");
-    $("." + newPage).addClass("active");
 };
 function contentUnload(newPage){
     $(".content").addClass("cOff");
@@ -43,7 +47,11 @@ function navSwitch(newPage){
 function navCheck(){
     var newPage = window.location.hash;
     var page = newPage.replace("#", "");
-    navSwitch(page);
+    if (page in titles) {
+        navSwitch(page);  
+    } else {
+        navSwitch("404");
+    }
 }
 
 
