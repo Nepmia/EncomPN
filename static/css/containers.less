@@ -2,8 +2,15 @@
 @wfluid: 100vw;
 @hfluid: 100vh;
 @wktuhack: calc(100vw - (100vw - 100%));
+.wfluid {
+    width: @wfluid;
+}
 
-// Containers rules
+.hfluid {
+    height: @hfluid;
+}
+
+// Flex
 .flex {
     display: flex;
 }
@@ -30,6 +37,7 @@
     justify-content: space-around;
 }
 
+//Wrappers
 .wrapper-row {
     .frow();
     .space-between();
@@ -40,21 +48,7 @@
     .center();
 }
 
-.wfluid {
-    width: @wfluid;
-}
-
-.hfluid {
-    height: @hfluid;
-}
-
-
-
-
-
-
-
-
+// Body & Scrollbar
 body {
     overflow-x: hidden;
     scrollbar-width: thin;
@@ -90,3 +84,5 @@ body::-webkit-scrollbar-thumb:focus {
     border: 0px solid @secondary;
     transition: @btrans;
 }
+
+// eContainer
