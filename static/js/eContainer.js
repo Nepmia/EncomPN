@@ -12,9 +12,9 @@ function eContainerPop(){
     },1000);
 };
 function eContentPop() {
-    $('.test').children().each(function(i){
+    $('.ec-c').children().each(function(i){
         setTimeout ( function(){
             $('.ec-elt' + i).removeClass('ec-elt-off');
-          },i * 20);
+          },i * 50);
         });
 }

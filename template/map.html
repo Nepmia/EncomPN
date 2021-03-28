@@ -1,15 +1,28 @@
-<div class="content cStand hfluid wfluid frow center">
-    <!-- eBtn -->
-    <div class="eBtn" text="RUN"></div>
+<div class="content frow center cStand">
+    
+    <!-- eContainer -->
+    <div class="eContainer frow center">
+        <!-- eContent -->
+        <div class="ec-frame eCoff">
+            
+            <div class="ec-c wrapper-col eC-c-off">
 
-    <!-- eBtn -->
-    <div class="eBtn" text="FOR"></div>
+                <!-- Title -->
+                <div class="btrans title uB ec-elt0 ec-elt-off">RELAY MAP</div>
 
-    <!-- eBtn -->
-    <div class="eBtn" text="LIFE"></div>
+                <!-- Map -->
+                <img src="/static/img/map.svg" class="btrans ec-elt1 ec-elt-off" style="height: 70vh" />
+
+            </div>
+        </div>
+    </div>
+
 </div>
+
 <script>
     animateLoad();
-    footerPlacer();
-    importer();
+    setTimeout(() =>{
+        eContainerPop();
+        footerPlacer();
+    },100);
 </script>
