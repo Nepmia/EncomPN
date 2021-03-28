@@ -1,6 +1,6 @@
 .eBtn-frame{
     height: 50px;
-    width: 100%;
+    width: 90%;
     min-width: 100px;
     background:
     linear-gradient(to right, @secondary @corners, transparent @corners) 0 0,
@@ -15,6 +15,7 @@
     background-size: 10px 100px;
     padding: 6px;
     margin: 0px 3px 0px 3px;
+    transition: @btrans;
 }
 
 .eBtn-bg{
@@ -23,12 +24,14 @@
     width: 100%;
     .fcol();
     .center();
+    transition: @btrans;
 }
 
 .eBtn-text{
     font-size: x-large;
     cursor: pointer;
     align-self: center;
+    transition: @btrans;
 }
 
 .eBtn-line-c1{
@@ -70,5 +73,30 @@
 }
 
 .eBtn:hover .eBtn-frame{
-    width: 110% !important;
+    // width: calc(100% + 10px);
+    padding: 6px 10px 6px 10px;
+    transition: @btrans;
+}
+
+.eBtn:hover .eBtn-bg{
+    background: @primary;
+    transition: @btrans;
+}
+
+.eBtn:hover .eBtn-text{
+    letter-spacing: 5px;
+    transition: @btrans;
+}
+
+.eBtn:hover .eBtn-left{
+    transition: @btrans;
+    transform: translateX(4px);
+}
+.eBtn:hover .eBtn-right{
+    transition: @btrans;
+    transform: translateX(-4px);
+}
+
+.eBtn-left,.eBtn-right{
+    transition: @btrans;
 }
