@@ -1,6 +1,6 @@
 function importer(){
-    $(".eBtn").each(() =>{
+    $(".eBtn").each(function(){
         var text = $(this).attr("text");
-        console.log(text);
+        $(this).load("/template/eBtn.html")
     });
 };

@@ -1,0 +1,41 @@
+.eBtn-frame{
+    height: 50px;
+    width: 100%;
+    background:
+    linear-gradient(to right, @secondary @corners, transparent @corners) 0 0,
+    linear-gradient(to right, @secondary @corners, transparent @corners) 0 100%,
+    linear-gradient(to left, @secondary @corners, transparent @corners) 100% 0,
+    linear-gradient(to left, @secondary @corners, transparent @corners) 100% 100%,
+    linear-gradient(to bottom, @secondary @corners, transparent @corners) 0 0,
+    linear-gradient(to bottom, @secondary @corners, transparent @corners) 100% 0,
+    linear-gradient(to top, @secondary @corners, transparent @corners) 0 100%,
+    linear-gradient(to top, @secondary @corners, transparent @corners) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 10px 100px;
+    padding: 6px;
+}
+.eBtn-bg{
+    background: @deepblue;
+    height: 100%;
+    width: 100%;
+    .fcol();
+    .center();
+}
+
+.eBtn-text{
+    font-size: x-large;
+    cursor: pointer;
+    align-self: center;
+}
+
+
+.eBtn-line-c{
+    height: 100%;
+}
+
+.eBtn-line1{
+    height: 90%;
+    width: 1px;
+    background: @details;
+    margin: 0px 5px 0px 5px;
+}
