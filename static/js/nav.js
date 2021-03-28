@@ -77,8 +77,8 @@ function toggleNavbar(status){
     $(".navbar").css("transform", "translateY(-50px)");
   } 
 }
-function animateLoad(){
-    setTimeout(() =>{
+function animateLoad(){ // Animation pupose
+    setTimeout(() =>{ 
         $(".content").removeClass("cStand")
     },10)
 }

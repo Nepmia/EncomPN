@@ -20,13 +20,13 @@
 </div>
 
 <script>
-    clearTimeout(pageLoadInstance);
+    clearTimeout(pageLoadInstance); // Clear Instances 
     clearTimeout(eContainerInstance);
     clearTimeout(navLoadInstance);
-    var pageLoadInstance;
+    var pageLoadInstance; // Init pageLoadInstance
 
-    animateLoad();
-    pageLoadInstance = setTimeout(() =>{
+    animateLoad(); // Show content
+    pageLoadInstance = setTimeout(() =>{ // Call eContainer animation functions
                             eContainerPop();
                             footerPlacer();
                         },100);
