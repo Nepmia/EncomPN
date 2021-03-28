@@ -1,6 +1,7 @@
 .eBtn-frame{
     height: 50px;
     width: 100%;
+    min-width: 100px;
     background:
     linear-gradient(to right, @secondary @corners, transparent @corners) 0 0,
     linear-gradient(to right, @secondary @corners, transparent @corners) 0 100%,
@@ -13,7 +14,9 @@
     background-repeat: no-repeat;
     background-size: 10px 100px;
     padding: 6px;
+    margin: 0px 3px 0px 3px;
 }
+
 .eBtn-bg{
     background: @deepblue;
     height: 100%;
@@ -28,14 +31,44 @@
     align-self: center;
 }
 
-
-.eBtn-line-c{
+.eBtn-line-c1{
     height: 100%;
+    width: 1px;
+}
+
+.eBtn-line-c2{
+    height: 100%;
+    width: 100%;
 }
 
 .eBtn-line1{
     height: 90%;
     width: 1px;
     background: @details;
-    margin: 0px 5px 0px 5px;
+    transition: @btrans;
+}
+
+.eBtn-line2{
+    height: 1px;
+    width: 10px;
+    background: @details;
+    transition: @btrans;
+}
+
+.eBtn{
+    cursor: pointer;
+}
+
+.eBtn:hover .l1l{
+    transform: translateX(-10px);
+    transition: @btrans;
+}
+
+.eBtn:hover .l1r{
+    transform: translateX(10px);
+    transition: @btrans;
+}
+
+.eBtn:hover .eBtn-frame{
+    width: 110% !important;
 }
