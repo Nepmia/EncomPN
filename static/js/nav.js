@@ -49,6 +49,8 @@ function navCheck(){
     var page = newPage.replace("#", "");
     if (page in titles) {
         navSwitch(page);  
+    } else if (page == ""){
+        navSwitch("home");
     } else {
         navSwitch("404");
     }
