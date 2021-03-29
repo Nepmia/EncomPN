@@ -10,20 +10,20 @@ function eContainerPopScroll(rClass){ // Target specific eContainer to animate i
                                 $("." + rEc).addClass("eC-c-off"); // Flicking Animation purpose
                                 setTimeout(() => { 
                                     $("." + rEc).removeClass("eC-c-off"); // Flicking Animation purpose
-                                    eContentPop(); // Show content after flicks
+                                    eContentPop(rEc); // Show content after flicks
                                 },50, rEc);   
                             },100, rEc);    
                         },1000, rEc);
 };
-function eContentPop() {
-    $('.ec-c').children().each(function(i){ // for each elt in .ec-c
+function eContentPop(rEc) {
+    $("." + rEc).children().each(function(i){ // for each elt in random .ec-c
         setTimeout ( function(){ 
-            $('.ec-elt' + i).removeClass('ec-elt-off'); // Make content appear with a delay between them
-          },i * 50);
+            $("." + rEc).find(".ec-elt" + i).removeClass("ec-elt-off"); // Make content appear with a delay between them
+          },i * 50, rEc);
         });
 }
 $(window).scroll(function(){ // When user scrolls
-    $(".eContainer-Scroller").onScrolledTo(0.2, function(){ // if eContainer enters in 20% of viewport
+    $(".eContainer-Scroller").onScrolledTo(0.3, function(){ // if eContainer enters in 20% of viewport
         if (this.hasClass("scrolled")){ // Verify if the targeted container is already shown
             // pass
         } else { 
