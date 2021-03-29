@@ -11,9 +11,6 @@ function footerHidder(status){
         $(".foot").removeClass("hidden");
     }
 }
-$(document).ready(() =>{
-    footerPlacer(); // Calculate when page loads
-})
 
 $(window).resize(() =>{ // Listen for page resize so we can re-calculate the footer pos
     footerHidder("on");

@@ -1,7 +1,7 @@
 var eContainerInstance; // Initialize eContainerInstance
 function eContainerPop(){
-    eContainerInstance = $(".ec-frame").removeClass("eCoff"); // Animation purpose
-                            setTimeout(() => {
+    $(".ec-frame").removeClass("eCoff"); // Animation purpose
+    eContainerInstance =    setTimeout(() => {
                                 $(".ec-c").removeClass("eC-c-off"); // Flicking Animation purpose
                                 setTimeout(() =>{
                                     $(".ec-c").addClass("eC-c-off"); // Flicking Animation purpose
