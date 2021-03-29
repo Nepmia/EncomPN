@@ -1,70 +1,127 @@
 <div class="content fcow center cStand">
     <div class="home-header">
 
-            <!-- wrapper header eContainer -->
-            <div class="fcol center" style="margin: 30px;">
-    
-                <!-- eContainer -->
-                <div class="eContainer frow center home-h-eContainer" style="transform: translateY(-20vh);">
-                    <!-- eContent -->
-                    <div class="ec-frame eCoff">
-                        
-                        <div class="ec-c frow center eC-c-off">
-        
-                            <!-- Title -->
-                            <div class="btrans home-h-title uB ec-elt0 ec-elt-off" style="margin: 10px;">TRAVEL <br> INSTANTLY <br> ACROSS <br> THE WORLD.</div>
-        
-                            <!-- Text & eBtn-->
-                            <div class="btrans fcol center ec-elt1 ec-elt-off">
-    
-                                <!-- Text -->
-                                <span class="uB home-text" style="margin: 10px;">The ENCOM Virtualisation laser is a
-                                    very advanced technology allowing the
-                                    user to travel great distances in a
-                                    flash.</span>
-    
-                                <!-- eBtn -->
-                                <div class="eBtn" text=" DISCOVER MORE"></div>
-                                
-                            </div>
-        
+        <!-- wrapper header eContainer -->
+        <div class="fcol center" style="margin: 30px;">
+
+            <!-- eContainer -->
+            <div class="eContainer frow center home-h-eContainer" style="transform: translateY(-20vh);">
+                <!-- eContent -->
+                <div class="ec-frame eCoff">
+
+                    <div class="ec-c frow center eC-c-off">
+
+                        <!-- Title -->
+                        <div class="btrans home-h-title uB ec-elt0 ec-elt-off" style="margin: 10px;">TRAVEL <br>
+                            INSTANTLY <br> ACROSS <br> THE WORLD.</div>
+
+                        <!-- Text & eBtn-->
+                        <div class="btrans fcol center ec-elt1 ec-elt-off">
+
+                            <!-- Text -->
+                            <span class="uB home-text" style="margin: 10px;">
+                                The ENCOM Virtualisation laser is a
+                                very advanced technology allowing the
+                                user to travel great distances in a
+                                flash.
+                            </span>
+
+                            <!-- eBtn -->
+                            <div class="eBtn" text=" DISCOVER MORE"></div>
+
                         </div>
+
                     </div>
                 </div>
-    
             </div>
+
+        </div>
 
     </div>
 
+    <!-- Separator -->
     <div class="full-sep"></div>
 
     <!-- Section general -->
-    <section class="frow center">
+    <section class="frow center" style="height: 50vh;margin: 30px;">
+
         <!-- eContainer -->
         <div class="eContainer frow center">
             <!-- eContent -->
             <div class="ec-frame eCoff">
-                
-                <div class="ec-c wrapper-col eC-c-off">
+                <div class="ec-c frow center eC-c-off">
 
-                    <!-- Title -->
-                    <div class="btrans title uB ec-elt0 ec-elt-off">RELAY MAP</div>
 
-                    <!-- Map -->
-                    <img src="/static/img/map.svg" class="btrans ec-elt1 ec-elt-off" style="height: 70vh" />
+                    <!-- Img -->
+                    <img src="/static/img/laser.jpg" class="ec-img ec-elt0 ec-elt-off btrans" alt="Encom Virtualisation laser">
+
+                    <div class="fcol ec-elt0 ec-elt-off btrans" style="justify-content: flex-start;">
+
+                        <!-- Title -->
+                        <div class="title uB" style="margin: 10px;">INTERNET AS A TRAVELLING NETWORK.</div>
+
+                        <!-- Text -->
+                        <span class="uB section-text" style="margin: 10px;">
+                            Virtualize any matter trough the EPN, the ENCOM private
+                            network.
+                            Using our network will allow you to travel at an insane speed
+                            anywhere in the world. 
+                            <br>
+                            <br>
+                            <strong style="text-decoration: underline;">For people, goods or even your cat.</strong>
+                        </span>
+                    
+                    </div>
 
                 </div>
             </div>
         </div>
+
     </section>
+
+    <!-- Separator -->
+    <div class="low-sep"></div>
 
     <!-- Section Speed -->
-    <section>
-
+    <section class="frow center" style="height: 50vh;margin: 30px;">
+              <!-- eContainer -->
+              <div class="eContainer frow center">
+                <!-- eContent -->
+                <div class="ec-frame eCoff">
+                    <div class="ec-c frow center eC-c-off">
+    
+    
+                        <!-- Img -->
+                        <img src="/static/img/laser.jpg" class="ec-img ec-elt0 ec-elt-off btrans" alt="Encom Virtualisation laser">
+    
+                        <div class="fcol ec-elt0 ec-elt-off btrans" style="justify-content: flex-start;">
+    
+                            <!-- Title -->
+                            <div class="title uB" style="margin: 10px;">INTERNET AS A TRAVELLING NETWORK.</div>
+    
+                            <!-- Text -->
+                            <span class="uB section-text" style="margin: 10px;">
+                                Virtualize any matter trough the EPN, the ENCOM private
+                                network.
+                                Using our network will allow you to travel at an insane speed
+                                anywhere in the world. 
+                                <br>
+                                <br>
+                                <strong style="text-decoration: underline;">For people, goods or even your cat.</strong>
+                            </span>
+                        
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
     </section>
 
+    <!-- Separator -->
+    <div class="low-sep"></div>
+
     <!-- Section Map -->
-    <section>
+    <section class="frow center" style="height: 50vh;margin: 30px;">
 
     </section>
 
@@ -79,9 +136,9 @@
 
     animateLoad(); // Show content
     importer(); // Create eBtns
-    pageLoadInstance = setTimeout(() =>{ // Call eContainer animation functions
-                            eContainerPop();
-                            footerPlacer();
-                            pageBgRecalc();
-                        },100);
+    pageLoadInstance = setTimeout(() => { // Call eContainer animation functions
+        eContainerPop();
+        footerPlacer();
+        pageBgRecalc();
+    }, 100);
 </script>
