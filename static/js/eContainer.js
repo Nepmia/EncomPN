@@ -12,14 +12,17 @@ function eContainerPop(){
                                 },100);    
                             },1000);
 };
-function eContainerPopScroll(str){
-    $(str).removeClass("eCoff"); // Animation purpose
-    eContainerInstance = setTimeout(() => {
-                            $(".ec-c").removeClass("eC-c-off"); // Flicking Animation purpose
+function eContainerPopScroll(rClass){
+    var rEc = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+    $("." + rClass).find(".ec-frame").removeClass("eCoff"); // Animation purpose
+    $("." + rClass).find(".ec-c").addClass(rEc);
+    eContainerInstance = setTimeout((rEc) => {
+                            console.log(rEc)
+                            $("." + rEc).removeClass("eC-c-off"); // Flicking Animation purpose
                             setTimeout(() =>{
-                                $(".ec-c").addClass("eC-c-off"); // Flicking Animation purpose
+                                $("." + rEc).addClass("eC-c-off"); // Flicking Animation purpose
                                 setTimeout(() => { 
-                                    $(".ec-c").removeClass("eC-c-off"); // Flicking Animation purpose
+                                    $("." + rEc).removeClass("eC-c-off"); // Flicking Animation purpose
                                     eContentPop(); // Show content after flicks
                                 },50);   
                             },100);    
@@ -34,7 +37,7 @@ function eContentPop() {
 }
 
 $(".eContainer-Scroller").onScrolledTo(0.5, function(){
-    var str = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+    var rClass = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
     $(this).find(".ec-frame").addClass(str);
     eContainerPopScroll(str);
 });

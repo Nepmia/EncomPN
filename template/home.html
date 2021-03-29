@@ -201,10 +201,12 @@
     importer(); // Create eBtns
     pageLoadInstance = setTimeout(() => { // Call eContainer animation functions
         $(".eContainer").each(function(){
-            if ($(".eContainer").hasClass("eContainer-Scroller")) {
+            if ($(this).hasClass("eContainer-Scroller")) {
                 // pass
             } else {
-                eContainerPop();
+                var rClass = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+                $(this).addClass(rClass);
+                eContainerPopScroll(rClass);
             }
         });
         footerPlacer();
