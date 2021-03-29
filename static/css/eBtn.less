@@ -20,7 +20,7 @@
 
 .eBtn-bg{
     background: rgb(47,70,111);
-    background: radial-gradient(circle, rgba(47,70,111,0.5) 0%, rgba(33,50,80,0.5) 100%);
+    background: radial-gradient(circle, rgba(47,70,111,0.8) 0%, rgba(33,50,80,0.8) 100%);
     height: 100%;
     width: 100%;
     .fcol();
@@ -46,7 +46,7 @@
 }
 
 .eBtn-line1{
-    height: 90%;
+    height: 50px;
     width: 1px;
     background: @details;
     transition: @btrans;
@@ -81,7 +81,8 @@
 }
 
 .eBtn:hover .eBtn-bg{
-    background: @primary;
+    background: rgb(47,70,111);
+    background: radial-gradient(circle, rgba(47,70,111,0.8) 0%, rgba(33,50,80,0.8) 100%), @primary;
     transition: @btrans;
 }
 
