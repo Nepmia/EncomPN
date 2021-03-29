@@ -1,5 +1,16 @@
 <div class="content cStand hfluid wfluid frow center" style="height: 200vh;"><span class="ab" style="align-self: center;">content goes here [home.html]</span></div>
+
+
 <script>
-    animateLoad();
-    footerPlacer();
+    clearTimeout(pageLoadInstance); // Clear Instances 
+    clearTimeout(eContainerInstance);
+    clearTimeout(navLoadInstance);
+    var pageLoadInstance; // Init pageLoadInstance
+
+    animateLoad(); // Show content
+    pageLoadInstance = setTimeout(() =>{ // Call eContainer animation functions
+                            eContainerPop();
+                            footerPlacer();
+                            pageBgRecalc();
+                        },100);
 </script>
