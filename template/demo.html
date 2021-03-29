@@ -1,4 +1,4 @@
-<div class="content frow center cStand">
+<div class="content content-pad frow center cStand">
 
     <!-- eContainer -->
     <div class="eContainer frow center">
@@ -8,19 +8,98 @@
             <div class="ec-c wrapper-col eC-c-off">
 
                 <!-- Title -->
-                <div class="btrans title uB ec-elt0 ec-elt-off">SPEED TEST</div>
+                <div class="btrans title uB ec-elt0 ec-elt-off" style="margin-left: 10px;">SPEED TEST</div>
 
-                <!-- dropdowns titles -->
-                <div class="btrans uB ec-elt1 ec-elt-off">
-                    <span>From</span>
-                    <span>To</span>
+                <!-- dropdowns -->
+                <div class="btrans uB ec-elt1 ec-elt-off frow space-between" style="margin: 10px;">
+
+                    <div class="from" style="width: 50%;">
+
+                        <span class="section-text">From</span>
+
+                        <!-- eDrop -->
+                        <div class="frow center eDrop">
+
+                            <div class="eDrop-left frow center">
+
+                                <div class="eDrop-line-c2 fcol center">
+                                    <div class="eDrop-line2"></div> 
+                                </div>
+
+                                <div class="eDrop-line-c1 fcol center">
+                                <div class="eDrop-line1 l1l"></div> 
+                                </div>
+
+                            </div>
+
+                            <div class="eDrop-frame">
+
+                                <div class="eDrop-bg">
+                                    <span id="eDrop" class="eDrop-text uB">text</span>
+                                </div>
+
+                            </div>
+
+                            <div class="eDrop-right frow center">
+                                
+                                <div class="eDrop-line-c1 fcol center">
+                                    <div class="eDrop-line1 l1r"></div> 
+                                </div>
+
+                                <div class="eDrop-line-c2 fcol center">
+                                    <div class="eDrop-line2"></div> 
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="to" style="width: 50%;">
+
+                        <span class="section-text">to</span>
+                        
+                        <!-- eDrop -->
+                        <div class="frow center eDrop">
+
+                            <div class="eDrop-left frow center">
+
+                                <div class="eDrop-line-c2 fcol center">
+                                    <div class="eDrop-line2"></div> 
+                                </div>
+
+                                <div class="eDrop-line-c1 fcol center">
+                                <div class="eDrop-line1 l1l"></div> 
+                                </div>
+
+                            </div>
+
+                            <div class="eDrop-frame">
+
+                                <div class="eDrop-bg">
+                                    <span id="eDrop" class="eDrop-text uB">text</span>
+                                </div>
+
+                            </div>
+
+                            <div class="eDrop-right frow center">
+                                
+                                <div class="eDrop-line-c1 fcol center">
+                                    <div class="eDrop-line1 l1r"></div> 
+                                </div>
+
+                                <div class="eDrop-line-c2 fcol center">
+                                    <div class="eDrop-line2"></div> 
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
- 
-                <!-- Speed test dropdowns-->
-                <div class="btrans speed-dropdowns ec-elt2 ec-elt-off"></div>
 
                 <!-- Speed test run button -->
-                <div class="btrans speed-btn ec-elt3 ec-elt-off">
+                <div class="btrans speed-btn ec-elt2 ec-elt-off" style="margin: 0px 0px 10px 0px;">
 
                     <!-- eBtn -->
                     <div class="eBtn" text="RUN"></div>
@@ -40,7 +119,7 @@
     var pageLoadInstance; // Init pageLoadInstance
 
     animateLoad(); // Show content
-    importer(); // Create eBtns
+    importer(); // Create eDrops
     pageLoadInstance = setTimeout(() => { // Call eContainer animation functions
         $(".eContainer").each(function(){
             if ($(this).hasClass("eContainer-Scroller")) {

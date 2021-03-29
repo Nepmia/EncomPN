@@ -1,4 +1,4 @@
-.eBtn-frame{
+.eDrop-frame{
     height: 50px;
     width: 100%;
     min-width: 100px;
@@ -18,10 +18,9 @@
     transition: @btrans;
 }
 
-.eBtn-bg{
+.eDrop-bg{
     background: rgb(47,70,111);
     background: radial-gradient(circle, rgba(47,70,111,0.8) 0%, rgba(33,50,80,0.8) 100%);
-    box-shadow: inset 0 0 30px rgb(21, 27, 43);
     height: 100%;
     width: 100%;
     .fcol();
@@ -29,7 +28,7 @@
     transition: @btrans;
 }
 
-.eBtn-text{
+.eDrop-text{
     font-size: x-large;
     cursor: pointer;
     align-self: center;
@@ -38,66 +37,65 @@
     margin: 10px;
 }
 
-.eBtn-line-c1{
+.eDrop-line-c1{
     height: 100%;
     width: 1px;
 }
 
-.eBtn-line-c2{
+.eDrop-line-c2{
     height: 100%;
     width: 100%;
 }
 
-.eBtn-line1{
+.eDrop-line1{
     height: 50px;
     width: 1px;
     background: @details;
     transition: @btrans;
 }
 
-.eBtn-line2{
+.eDrop-line2{
     height: 1px;
     width: 10px;
     background: @details;
     transition: @btrans;
 }
 
-.eBtn{
+.eDrop{
     cursor: pointer;
-    padding: 0px 10px 0px 10px;
     pointer-events: all;
 }
 
-.eBtn:hover .l1l{
+.eDrop:hover .l1l{
     transform: translateX(-10px);
     transition: @btrans;
 }
 
-.eBtn:hover .l1r{
+.eDrop:hover .l1r{
     transform: translateX(10px);
     transition: @btrans;
 }
 
-.eBtn:hover .eBtn-frame{
+.eDrop:hover .eDrop-frame{
     padding: 6px 10px 6px 10px;
     transition: @btrans;
 }
 
-.eBtn:hover .eBtn-bg{
+.eDrop:hover .eDrop-bg{
     background: rgb(47,70,111);
     background: radial-gradient(circle, rgba(47,70,111,0.8) 0%, rgba(33,50,80,0.8) 100%), @primary;
     transition: @btrans;
 }
 
-.eBtn:hover .eBtn-left{
+.eDrop:hover .eDrop-left{
     transition: @btrans;
     transform: translateX(4px);
 }
-.eBtn:hover .eBtn-right{
+.eDrop:hover .eDrop-right{
     transition: @btrans;
     transform: translateX(-4px);
 }
 
-.eBtn-left,.eBtn-right{
+.eDrop-left,.eDrop-right{
     transition: @btrans;
 }
