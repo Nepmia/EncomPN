@@ -5,3 +5,9 @@ function importer(){
         $(this).find("#eBtn").text(text); // Gives the good text to the btn
     });
 };
+
+$(document).on("click", ".discoverMore", function(){ // When user click on discoverMore btn
+    $([document.documentElement, document.body]).animate({ // animate scroll 
+        scrollTop: $("#anchor").offset().top // scroll to targeted element
+    }, 1000);
+});
