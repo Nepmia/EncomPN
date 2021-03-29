@@ -1,5 +1,5 @@
 // Media queries
-@media screen and (max-width: 800px) {
+@media screen and (max-width:1252px) {
     .navbar-links {
         display: none;
     }
@@ -18,20 +18,75 @@
         transform: translateY(5vh);
     }
     .ec-resp{
-        .fcol();
+        .frow();
         .center();
     }
+
+    .title{
+        font-size: 2vh;
+        text-align: right;
+        width: fit-content;
+    }
+    
+    .home-h-title{
+        font-size: 2vh;
+        text-align: right;
+        width: fit-content;
+    }
+    
+    .home-text{
+        font-size: 1vh;
+        overflow: hidden;
+        text-align: left;
+        max-width: 400px;
+    }
+    .section-text{
+        font-size: 1vh;
+        overflow: hidden;
+        text-align: left;
+    }
     .ec-img{
-        max-height: 100px;
+        height: 20vw;
+        width: auto;
+    }
+    .eBtn-text{
+        font-size: small !important;
+    }
+    .sec-resp{
+        margin: 10px;
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width:1252px) {
     .navbar-ham {
         display: none;
     }
     .ec-resp{
-        .fcol();
+        .frow();
         .center();
+    }
+
+    .title{
+        font-size: 6vh;
+        text-align: right;
+        width: fit-content;
+    }
+    
+    .home-h-title{
+        font-size: 6vh;
+        text-align: right;
+        width: fit-content;
+    }
+    
+    .home-text{
+        font-size: 3vh;
+        overflow: hidden;
+        text-align: left;
+        max-width: 400px;
+    }
+    .section-text{
+        font-size: 3vh;
+        overflow: hidden;
+        text-align: left;
     }
 }
