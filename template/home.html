@@ -50,7 +50,7 @@
             <div class="frow center">
 
                 <!-- eContainer -->
-                <div class="eContainer frow center">
+                <div class="eContainer eContainer-Scroller frow center">
                     <!-- eContent -->
                     <div class="ec-frame eCoff">
                         <div class="ec-c ec-resp eC-c-off">
@@ -93,7 +93,7 @@
             <div class="frow center">
 
                 <!-- eContainer -->
-                <div class="eContainer frow center">
+                <div class="eContainer eContainer-Scroller frow center">
                     <!-- eContent -->
                     <div class="ec-frame eCoff">
                         <div class="ec-c ec-resp eC-c-off">
@@ -120,8 +120,8 @@
                                     </span>
         
                                     <!-- eBtn -->
-                                    <div class="eBtn" text="SPEED TEST" style="margin-bottom: 10px;"></div>
-
+                                    <div class="eBtn pageChanger" text="SPEED TEST" page="demo" style="margin-bottom: 10px;"></div>
+                                        
                                 </div>
 
                             </div>
@@ -142,7 +142,7 @@
             <div class="frow center">
 
                 <!-- eContainer -->
-                <div class="eContainer frow center">
+                <div class="eContainer eContainer-Scroller frow center">
                     <!-- eContent -->
                     <div class="ec-frame eCoff">
                         <div class="ec-c ec-resp eC-c-off">
@@ -170,7 +170,7 @@
                                     </span>
         
                                     <!-- eBtn -->
-                                    <div class="eBtn" text="CHECK EPN MAP" style="margin-bottom: 10px;"></div>
+                                    <div class="eBtn pageChanger" page="map" text="CHECK EPN MAP" style="margin-bottom: 10px;"></div>
 
                                 </div>
 
@@ -200,7 +200,13 @@
     animateLoad(); // Show content
     importer(); // Create eBtns
     pageLoadInstance = setTimeout(() => { // Call eContainer animation functions
-        eContainerPop();
+        $(".eContainer").each(function(){
+            if ($(".eContainer").hasClass("eContainer-Scroller")) {
+                // pass
+            } else {
+                eContainerPop();
+            }
+        });
         footerPlacer();
         pageBgRecalc();
     }, 100);

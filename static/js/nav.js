@@ -7,12 +7,13 @@ const titles = { // Titles dict
 };
 
 $(document).ready(() => {
-    $(".pageChanger").click(function() { // When user click on a pagechanger elt
-        clearTimeout(eContainerInstance); // Clear the eContainer instance to avoid weird bahavior
-        clearTimeout(navLoadInstance); // Clear navLoad instance
-        var newPage = $(this).attr("page"); // get clicked elt destination
-        changePage(newPage); // Change page to the desired page
-        $(".navbar").addClass("toggled"); // add toggled to navbar to be sure it is not affected by ScrollFx until user scrolls
+    $(document).on("click", ".pageChanger", function(){ // When user click on a pagechanger elt
+            clearTimeout(eContainerInstance); // Clear the eContainer instance to avoid weird bahavior
+            clearTimeout(navLoadInstance); // Clear navLoad instance
+            var newPage = $(this).attr("page"); // get clicked elt destination
+            console.log(newPage)
+            changePage(newPage); // Change page to the desired page
+            $(".navbar").addClass("toggled"); // add toggled to navbar to be sure it is not affected by ScrollFx until user scrolls
     });
 
     navCheck(); // When document load, check the hash to see if a page needs to be loaded
@@ -26,7 +27,7 @@ function changePage(newPage){
     } else {
         document.title = "Error 404 - EncomPN"; // Give page a 404 title
     }
-    $('html,body').animate({ scrollTop: 0 }, "fast", () => { // Rescroll up
+    $("html,body").animate({ scrollTop: 0 }, "fast", () => { // Rescroll up
         saved_scroll = 0; // Reset saved scroll so user doesn't get weird navbar
     });
     window.location.hash = newPage; // Change hash to the current page
