@@ -1,16 +1,16 @@
 var eContainerInstance; // Initialize eContainerInstance
 function eContainerPop(){
     $(".ec-frame").removeClass("eCoff"); // Animation purpose
-    eContainerInstance =    setTimeout(() => {
-                                $(".ec-c").removeClass("eC-c-off"); // Flicking Animation purpose
-                                setTimeout(() =>{
-                                    $(".ec-c").addClass("eC-c-off"); // Flicking Animation purpose
-                                    setTimeout(() => { 
-                                        $(".ec-c").removeClass("eC-c-off"); // Flicking Animation purpose
-                                        eContentPop(); // Show content after flicks
-                                    },50);   
-                                },100);    
-                            },1000);
+    eContainerInstance = setTimeout(() => {
+                            $(".ec-c").removeClass("eC-c-off"); // Flicking Animation purpose
+                            setTimeout(() =>{
+                                $(".ec-c").addClass("eC-c-off"); // Flicking Animation purpose
+                                setTimeout(() => { 
+                                    $(".ec-c").removeClass("eC-c-off"); // Flicking Animation purpose
+                                    eContentPop(); // Show content after flicks
+                                },50);   
+                            },100);    
+                        },1000);
 };
 function eContentPop() {
     $('.ec-c').children().each(function(i){ // for each elt in .ec-c
