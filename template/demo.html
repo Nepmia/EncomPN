@@ -41,9 +41,17 @@
 
     animateLoad(); // Show content
     importer(); // Create eBtns
-    pageLoadInstance = setTimeout(() =>{ // Call eContainer animation functions
-                            eContainerPop();
-                            footerPlacer();
-                            pageBgRecalc();
-                        },100);
+    pageLoadInstance = setTimeout(() => { // Call eContainer animation functions
+        $(".eContainer").each(function(){
+            if ($(this).hasClass("eContainer-Scroller")) {
+                // pass
+            } else {
+                var rClass = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+                $(this).addClass(rClass);
+                eContainerPopScroll(rClass);
+            }
+        });
+        footerPlacer();
+        pageBgRecalc();
+    }, 100);
 </script>
