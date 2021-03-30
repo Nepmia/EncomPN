@@ -31,6 +31,13 @@ function closeDrop() {
     $(".eDrop-bg").css({"height": "50px","overflow-y": "hidden"}).removeClass("opened");
     $(".eDrop-bg").find("#eDrop").css("pointer-events", "none");
 }
+
+$(window).click(function() {
+    if ($(".eDrop-bg").hasClass("opened")){
+        closeDrop();
+    }
+});
+
 $(document).on("click", ".eDrop-bg", function(event){
     if (event.currentTarget !== event.target) {
         return;
