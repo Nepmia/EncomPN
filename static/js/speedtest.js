@@ -133,3 +133,22 @@ function launchTest(){
         $(this).addClass("eProgress-done");        
     });
 }
+function resetResults() {
+    $(".virt").css("transition", "0s ease");
+    $(".transf").css("transition", "0s ease");
+    $(".totime").css("transition", "0s ease");
+    $(".eTime-virt").addClass("ec-elt-off");
+    $(".eTime-transf").addClass("ec-elt-off");
+    $(".eTime-totime").addClass("ec-elt-off");
+    $(".eProgress-done").removeClass(".eProgress-done");
+}
+
+$(document).on("click", ".speedTestRetry", function(){
+    $("#eDrop-error").addClass("hidden");
+    $(".ran-test").addClass("hidden"); 
+    setTimeout(() => {
+        $(".ran-test").addClass("noExistence");
+        $(".pre-test").removeClass("noExistence").removeClass("hidden");
+    },300)
+    resetResults();
+});
