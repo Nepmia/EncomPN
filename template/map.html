@@ -24,23 +24,30 @@
 <div style="width: 100vw;height: 10vh;"></div>
 
 <script>
-    clearTimeout(pageLoadInstance); // Clear Instances 
-    clearTimeout(eContainerInstance);
-    clearTimeout(navLoadInstance);
-    var pageLoadInstance; // Init pageLoadInstance
-
-    animateLoad(); // Show content
-    pageLoadInstance = setTimeout(() => { // Call eContainer animation functions
-        $(".eContainer").each(function(){
-            if ($(this).hasClass("eContainer-Scroller")) {
-                // pass
-            } else {
-                var rClass = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-                $(this).addClass(rClass);
-                eContainerPopScroll(rClass);
-            }
-        });
-        footerPlacer();
-        pageBgRecalc();
-    }, 100);
+        setTimeout(() => {
+            clearTimeout(pageLoadInstance); // Clear Instances 
+            clearTimeout(eContainerInstance);
+            clearTimeout(navLoadInstance);
+            var pageLoadInstance; // Init pageLoadInstance
+        
+            animateLoad(); // Show content
+            pageLoadInstance = setTimeout(() => { // Call eContainer animation functions
+                importer();
+                footerPlacer();
+                pageBgRecalc();
+                if ($(".preloader-table").hasClass("hidden")) {
+                    $(".eContainer").each(function(){
+                        if ($(this).hasClass("eContainer-Scroller")) {
+                            // pass
+                        } else {
+                            var rClass = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+                            $(this).addClass(rClass);
+                            eContainerPopScroll(rClass);
+                        }
+                    });
+                } else {
+                    // pass
+                }
+            }, 100);
+        },200);
 </script>
