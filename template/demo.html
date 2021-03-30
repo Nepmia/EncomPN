@@ -35,7 +35,11 @@
                             <div class="eDrop-frame">
 
                                 <div class="eDrop-bg">
-                                    <span id="eDrop" class="eDrop-text uB">text</span>
+                                    <span id="eDrop" class="eDrop-text uB">
+                                        <ul class="eDrop-ul" style="list-style: none;">
+
+                                        </ul>
+                                    </span>
                                 </div>
 
                             </div>
@@ -122,6 +126,7 @@
             animateLoad(); // Show content
             pageLoadInstance = setTimeout(() => { // Call eContainer animation functions
                 importer();
+                cityImporter();
                 footerPlacer();
                 pageBgRecalc();
                 if ($(".preloader-table").hasClass("hidden")) {
