@@ -4,13 +4,7 @@ window.onload = function() {
     $("video").on("ended", function(){
         $(".preloader-table").addClass("hidden");
         setTimeout(() => {
-            $(".preloader-table").addClass("d-none");
-            $(".anPre").removeClass("anPre");
-            if ($(".current").attr("page") == "home"){
-              progressBar();
-            } else {
-              // pass
-            }
+            $(".preloader-table").addClass("none");
         },200);
     });
   }
