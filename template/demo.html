@@ -37,7 +37,7 @@
                                 <div class="btrans eDrop-bg noSelect">
 
                                     <span id="eDrop" class="btrans eDrop-text uB" style="pointer-events: none;">
-                                        <ul class="btrans eDrop-ul" type="from" style="list-style: none;margin: 0px;">
+                                        <ul class="btrans eDrop-ul drop1" type="from" style="list-style: none;margin: 0px;">
                                             <!-- Cities go here -->
                                             <li class='btrans eDrop-hov eDrop-list-item uL eDrop-marg'>Select</li>
                                         </ul>
@@ -86,7 +86,7 @@
                                 <div class="eDrop-bg noSelect">
 
                                     <span id="eDrop" class="btrans eDrop-text uB" style="pointer-events: none;">
-                                        <ul class="btrans eDrop-ul" type="to" style="list-style: none;margin: 0px;">
+                                        <ul class="btrans eDrop-ul drop2" type="to" style="list-style: none;margin: 0px;">
                                             <!-- Cities go here -->
                                             <li class='btrans eDrop-hov eDrop-list-item uL eDrop-marg'>Select</li>
                                         </ul>
@@ -116,7 +116,7 @@
                 <div class="btrans speed-btn ec-elt2 ec-elt-off" style="margin: 0px 0px 10px 0px;">
 
                     <!-- eBtn -->
-                    <div class="eBtn" text="RUN"></div>
+                    <div class="eBtn speedTestRun" text="RUN"></div>
 
                 </div>
 
@@ -136,7 +136,7 @@
             animateLoad(); // Show content
             pageLoadInstance = setTimeout(() => { // Call eContainer animation functions
                 importer();
-                cityImporter();
+                dropCreation();
                 footerPlacer();
                 pageBgRecalc();
                 if ($(".preloader-table").hasClass("hidden")) {

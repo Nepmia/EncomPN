@@ -24,10 +24,14 @@ const cities = [
 var from;
 var to;
 
-
-function cityImporter() {
+function dropCreation() {
+    cityImporter(".drop1");
+    cityImporter(".drop2");
+}
+function cityImporter(targ) {
     for (city_name in cities.sort()) {
-        $(".eDrop-ul").append("<li class='btrans eDrop-list-item uL eDrop-marg' item='" + cities[city_name] + "'>" + cities[city_name] + "</li>");
+        var type = $(targ).attr("type")
+        $(targ).append("<li class='btrans eDrop-list-item uL eDrop-marg' type='" + type + "' item='" + cities[city_name] + "'>" + cities[city_name] + "</li>");
     }
 }
 function closeDrop() {
@@ -64,10 +68,19 @@ $(document).on("click", ".eDrop-ul", function(event){
 
 $(document).on("click", ".eDrop-list-item", function(){
     var scrolled = $(this).position();
-    console.log("clique salope" + scrolled.top);
-    console.log($(".opened").find(".eDrop-bg"));
+    var type = $(this).attr("type");
+    var item = $(this).attr("item");
     $(".opened").addClass("Selected").removeClass("noSelect");
     $(".opened").animate({ scrollTop: scrolled.top }, "slow", () => { // Rescroll up
         closeDrop();
     });
+    if (type == "from") {
+        from = item;
+    } else {
+        to = item;
+    }
+});
+
+$(document).on("click", ".speedTestRun", function(){
+    console.log(from + to)
 });
