@@ -21,8 +21,8 @@ const cities = [
     "Séoul",
     "Luxembourg"
 ]
-var from;
-var to;
+var from = null;
+var to = null;
 
 function dropCreation() {
     cityImporter(".drop1");
@@ -82,5 +82,10 @@ $(document).on("click", ".eDrop-list-item", function(){
 });
 
 $(document).on("click", ".speedTestRun", function(){
-    console.log(from + to)
+    if (from != null && to != null) {
+        $("#eDrop-error").addClass("hidden");
+        console.log(from + to);
+    } else {
+        $("#eDrop-error").removeClass("hidden");
+    }
 });
