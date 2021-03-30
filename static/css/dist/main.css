@@ -737,3 +737,8 @@ body::-webkit-scrollbar-thumb:focus {
 .eProgress-done {
   width: 90% !important;
 }
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: progress;
+}

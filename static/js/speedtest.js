@@ -127,6 +127,7 @@ function launchTest(){
         $(".eTime-transf").delay(transf).queue(function(){
             $(".eTime-transf").removeClass("ec-elt-off");
             $(".eTime-totime").removeClass("ec-elt-off");
+            $(".speedTestRetry").removeClass("disabled");
         });
     });
     $(".totime").delay(0).queue(function() {
