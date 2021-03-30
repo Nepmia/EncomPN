@@ -27,7 +27,7 @@ function changePage(newPage){
     } else {
         document.title = "Error 404 - EncomPN"; // Give page a 404 title
     }
-    $("html,body").animate({ scrollTop: 0 }, 500, () => { // Rescroll up
+    $("html,body").animate({ scrollTop: 0 }, "swing", () => { // Rescroll up
         saved_scroll = 0; // Reset saved scroll so user doesn't get weird navbar
     });
     window.location.hash = newPage; // Change hash to the current page

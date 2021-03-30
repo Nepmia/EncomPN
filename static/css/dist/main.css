@@ -590,7 +590,7 @@ body::-webkit-scrollbar-thumb:focus {
   transition: 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: left;
   overflow: hidden;
 }
 .eDrop-text {
@@ -662,6 +662,34 @@ body::-webkit-scrollbar-thumb:focus {
 }
 .eDrop-left,
 .eDrop-right {
+  transition: 0.3s ease;
+}
+.eDrop-bg::-webkit-scrollbar {
+  width: 10px;
+}
+.eDrop-bg::-webkit-scrollbar-track {
+  background: #364875;
+}
+.eDrop-bg::-webkit-scrollbar-thumb {
+  background-color: #E3EBFF;
+  border-radius: 20px;
+  border: 3px solid #364875;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.eDrop-bg::-webkit-scrollbar-thumb:hover {
+  background-color: #7F9CE5;
+  border-radius: 20px;
+  border: 3px solid #364875;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.eDrop-bg::-webkit-scrollbar-thumb:focus {
+  background-color: #7F9CE5;
+  border-radius: 20px;
+  border: 0px solid #7F9CE5;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 .home-header {
