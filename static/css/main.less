@@ -45,12 +45,21 @@
 
 // Demo
 
+.noExistence{
+    transform: scale(0) !important;
+    margin: 0px !important;
+    height: 0px !important;
+    font-size: 0px !important;
+    transition: @btrans !important;
+}
+
 .eProgress{
     border-radius: 50px;
     width: 1%;
     height: 20px;
-    box-shadow: 0px 0px 5px @ultra_accents;
-    background: @lbgrad;
+    box-shadow: 0px 0px 1px @ultra_accents;
+    background: rgb(82,131,209);
+    background: linear-gradient(90deg, rgba(82,131,209,1) 0%, rgba(127,156,229,1) 100%);
 }
 .eProgress-done{
     width: 90% !important;

@@ -88,6 +88,9 @@ $(document).on("click", ".speedTestRun", function(){
     } else if (from != null && to != null) {
         $("#eDrop-error").addClass("hidden");
         $(".pre-test").addClass("hidden");
+        setTimeout(() => {
+            $(".pre-test").addClass("noExistence");
+        },300)
         launchTest();
     } else {
         $("#eDrop-error").text("ERROR: Either from or to is not selected, please select both and try again.")
@@ -95,6 +98,38 @@ $(document).on("click", ".speedTestRun", function(){
     }
 });
 
+var virtInstance;
+var transfInstance;
+var totimeInstance;
 function launchTest(){
     $(".test-title").text("From " + from + " to " + to);
+    var virt = 10
+    var transf = Math.random() * (0.99 - 0.01) + 0.01;
+    var totime = virt + transf;
+    $(".eTime-virt").text(virt + " s");
+    $(".eTime-transf").text(transf.toFixed(2) + " s");
+    $(".eTime-totime").text(totime.toFixed(2) + " s");
+
+    setTimeout(() => {
+        $(".ran-test").removeClass("noExistence").removeClass("hidden");
+    },300);
+
+    $(".virt").css("transition", virt + "s ease");
+    $(".transf").css("transition", transf.toFixed(2) + "s ease");
+    $(".totime").css("transition", 10 + transf + "s ease");
+    
+    $(".virt").delay(0).queue(function() {
+        $(this).addClass("eProgress-done");
+    });
+    $(".transf").delay(10000).queue(function() {
+        $(this).addClass("eProgress-done");
+        $(".eTime-virt").removeClass("ec-elt-off");
+        $(".eTime-transf").delay(transf).queue(function(){
+            $(".eTime-transf").removeClass("ec-elt-off");
+            $(".eTime-totime").removeClass("ec-elt-off");
+        });
+    });
+    $(".totime").delay(0).queue(function() {
+        $(this).addClass("eProgress-done");        
+    });
 }

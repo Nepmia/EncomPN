@@ -719,12 +719,20 @@ body::-webkit-scrollbar-thumb:focus {
 .sec-resp {
   margin: 30px;
 }
+.noExistence {
+  transform: scale(0) !important;
+  margin: 0px !important;
+  height: 0px !important;
+  font-size: 0px !important;
+  transition: 0.3s ease !important;
+}
 .eProgress {
   border-radius: 50px;
   width: 1%;
   height: 20px;
-  box-shadow: 0px 0px 5px #E3EBFF;
-  background: radial-gradient(circle, #dbe5ff 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px 0px 1px #E3EBFF;
+  background: #5283d1;
+  background: linear-gradient(90deg, #5283d1 0%, #7f9ce5 100%);
 }
 .eProgress-done {
   width: 90% !important;
