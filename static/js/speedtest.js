@@ -88,8 +88,13 @@ $(document).on("click", ".speedTestRun", function(){
     } else if (from != null && to != null) {
         $("#eDrop-error").addClass("hidden");
         $(".pre-test").addClass("hidden");
+        launchTest();
     } else {
         $("#eDrop-error").text("ERROR: Either from or to is not selected, please select both and try again.")
         $("#eDrop-error").removeClass("hidden");
     }
 });
+
+function launchTest(){
+    $(".test-title").text("From " + from + " to " + to);
+}

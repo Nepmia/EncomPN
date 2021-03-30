@@ -576,7 +576,7 @@ body::-webkit-scrollbar-thumb:focus {
   min-width: 100px;
   background: linear-gradient(to right, #7F9CE5 3px, transparent 3px) 0 0, linear-gradient(to right, #7F9CE5 3px, transparent 3px) 0 100%, linear-gradient(to left, #7F9CE5 3px, transparent 3px) 100% 0, linear-gradient(to left, #7F9CE5 3px, transparent 3px) 100% 100%, linear-gradient(to bottom, #7F9CE5 3px, transparent 3px) 0 0, linear-gradient(to bottom, #7F9CE5 3px, transparent 3px) 100% 0, linear-gradient(to top, #7F9CE5 3px, transparent 3px) 0 100%, linear-gradient(to top, #7F9CE5 3px, transparent 3px) 100% 100%;
   background-repeat: no-repeat;
-  background-size: 10px 100px;
+  background-size: 1000px 10px;
   padding: 6px;
   margin: 0px 3px 0px 3px;
   transition: 0.3s ease;
@@ -629,11 +629,13 @@ body::-webkit-scrollbar-thumb:focus {
   pointer-events: all;
 }
 .eDrop-marg {
-  margin: 0px 0px 50px -20px;
+  margin: 0px 20px 50px -20px;
 }
 .eDrop-list-item:hover {
-  transform: translateX(10px);
+  letter-spacing: 3px;
   color: #f2dbff;
+  background-color: rgba(219, 229, 255, 0.2);
+  border-radius: 5px;
 }
 .eDrop:hover .l1l {
   transform: translateX(-10px);
@@ -716,4 +718,14 @@ body::-webkit-scrollbar-thumb:focus {
 }
 .sec-resp {
   margin: 30px;
+}
+.eProgress {
+  border-radius: 50px;
+  width: 1%;
+  height: 20px;
+  box-shadow: 0px 0px 5px #E3EBFF;
+  background: radial-gradient(circle, #dbe5ff 0%, rgba(255, 255, 255, 0) 100%);
+}
+.eProgress-done {
+  width: 90% !important;
 }
