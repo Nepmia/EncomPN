@@ -27,6 +27,7 @@
     transition: @btrans;
     .fcol();
     justify-content: flex-start;
+    overflow: hidden;
 }
 
 .eDrop-text{
@@ -68,6 +69,15 @@
 .eDrop{
     cursor: pointer;
     pointer-events: all;
+}
+
+.eDrop-marg{
+    margin: 0px 0px 50px -20px;
+}
+
+.eDrop-list-item:hover{
+    transform: translateX(10px);
+    color: @details;
 }
 
 .eDrop:hover .l1l{

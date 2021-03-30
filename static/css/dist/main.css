@@ -591,6 +591,7 @@ body::-webkit-scrollbar-thumb:focus {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  overflow: hidden;
 }
 .eDrop-text {
   position: relative;
@@ -626,6 +627,13 @@ body::-webkit-scrollbar-thumb:focus {
 .eDrop {
   cursor: pointer;
   pointer-events: all;
+}
+.eDrop-marg {
+  margin: 0px 0px 50px -20px;
+}
+.eDrop-list-item:hover {
+  transform: translateX(10px);
+  color: #f2dbff;
 }
 .eDrop:hover .l1l {
   transform: translateX(-10px);

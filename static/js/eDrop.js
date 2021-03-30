@@ -23,7 +23,20 @@ const cities = [
 ]
 
 function cityImporter() {
-    for (city_name in cities) {
-        $(".eDrop-ul").append("<li class='eDrop-list-item uL' style='margin: 0px 0px 50px 0px'>" + cities[city_name] + "</li>");
+    for (city_name in cities.sort()) {
+        $(".eDrop-ul").append("<li class='btrans eDrop-list-item uL eDrop-marg'>" + cities[city_name] + "</li>");
     }
 }
+
+$(document).on("click", ".eDrop-bg", function(){
+    if ($(this).hasClass("opened")) {
+        $(this).css({"height": "50px","overflow-y": "hidden"}).removeClass("opened");
+        if ($(this).hasClass("noSelect")){
+            $(this).animate({ scrollTop: 0 }, "slow", () => { // Rescroll up
+                // pass
+            });
+        }
+    } else {
+        $(this).css({"height": "350px","overflow-y": "scroll"}).addClass("opened");
+    }
+});
