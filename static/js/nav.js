@@ -58,7 +58,8 @@ function navCheck(){
     } else if (page == "") { // if hash is null
         navSwitch("home");
     } else { // if hash is unknow 
-        navSwitch("404");
+        alert("ERROR 404: The page you requested doesn't exist on this server. Please check URL. Redirecting to home page.")
+        navSwitch("home");
     }
 }
 

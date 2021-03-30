@@ -31,7 +31,7 @@ function dropCreation() { // Launch dropdown content creation function
 function cityImporter(targ) {
     for (city_name in cities.sort()) { // Iterate trough cities number
         var type = $(targ).attr("type") // Get current type
-        $(targ).append("<li class='btrans eDrop-list-item uL eDrop-marg' type='" + type + "' item='" + cities[city_name] + "'>" + cities[city_name] + "</li>"); // Add city name to dropdown
+        $(targ).append("<li class='btrans eDrop-list-item section-text uL eDrop-marg' type='" + type + "' item='" + cities[city_name] + "'>" + cities[city_name] + "</li>"); // Add city name to dropdown
     }
 }
 function closeDrop() { // Close dropdown
@@ -99,6 +99,7 @@ $(document).on("click", ".speedTestRun", function(){ // Call for RunBtn clicks
 });
 
 function launchTest(){
+    $(".speedTestRetry").addClass("disabled"); // Disable Retry btn
     $(".test-title").text("From " + from + " to " + to); // Set test title to correct values
     var virt = 10 // virt time contant 
     var transf = Math.random() * (0.99 - 0.01) + 0.01; // Random number between 0.01 and 0.99
