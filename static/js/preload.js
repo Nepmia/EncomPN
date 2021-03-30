@@ -1,7 +1,7 @@
 window.onload = function() {
     $("#preloader").removeAttr("loop");
-    footerPlacer();
     $("video").on("ended", function(){
+        footerPlacer();
         $(".preloader-table").addClass("hidden");
         setTimeout(() => {
             $(".preloader-table").addClass("none");
