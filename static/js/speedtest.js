@@ -72,8 +72,8 @@ $(document).on("click", ".eDrop-list-item", function(){
     var item = $(this).attr("item");
     $(".opened").addClass("Selected").removeClass("noSelect");
     $(".opened").animate({ scrollTop: scrolled.top }, "slow", () => { // Rescroll up
-        closeDrop();
     });
+    closeDrop();
     if (type == "from") {
         from = item;
     } else {
