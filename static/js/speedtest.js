@@ -82,10 +82,14 @@ $(document).on("click", ".eDrop-list-item", function(){
 });
 
 $(document).on("click", ".speedTestRun", function(){
-    if (from != null && to != null) {
+    if ( from == to && from != null ) {
+        $("#eDrop-error").text("ERROR: From and to are equal! Please make them different!")
+        $("#eDrop-error").removeClass("hidden");
+    } else if (from != null && to != null) {
         $("#eDrop-error").addClass("hidden");
-        console.log(from + to);
+        $(".pre-test").addClass("hidden");
     } else {
+        $("#eDrop-error").text("ERROR: Either from or to is not selected, please select both and try again.")
         $("#eDrop-error").removeClass("hidden");
     }
 });
