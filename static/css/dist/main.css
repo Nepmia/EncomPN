@@ -44,6 +44,9 @@
   flex-direction: column;
   justify-content: center;
 }
+.antiscroll {
+  overflow: hidden;
+}
 body {
   overflow-x: hidden;
   scrollbar-width: thin;

@@ -3,6 +3,7 @@ window.onload = function() {
     $("video").on("ended", function(){
         footerPlacer();
         $(".preloader-table").addClass("hidden");
+        $("body").removeClass("antiscroll");
         $(".eContainer").each(function(){
             if ($(this).hasClass("eContainer-Scroller")) {
                 // pass
