@@ -20,8 +20,11 @@ Less contain all my styling rules and variables trough different modules, each m
 
 ## Online preview
 
-As I'm not done yet this feature is not enabled.
+https://cours.nepmia.fr
 
 ## Conception
 
-As I'm not done yet this feature is not enabled.
+Github permalink: 
+https://github.com/Nepmia/EncomPN
+
+
