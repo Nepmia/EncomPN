@@ -118,7 +118,7 @@ function launchTest(){
     
     $(".virt").delay(0).queue(function(nxt) { // Launch cursor with queue
         $(this).addClass("eProgress-done");
-        nxt();
+        nxt(); // Reset delay
     });
     $(".transf").delay(10000).queue(function(nxt) {
         $(this).addClass("eProgress-done");
@@ -127,13 +127,13 @@ function launchTest(){
             $(".eTime-transf").removeClass("ec-elt-off");  // make seconds appear
             $(".eTime-totime").removeClass("ec-elt-off");  // make seconds appear
             $(".speedTestRetry").removeClass("disabled"); // Enable Retry btn
-            nxt();
+            nxt(); // Reset delay
         });
-        nxt();
+        nxt(); // Reset delay
     });
     $(".totime").delay(0).queue(function(nxt) { // Launch cursor with queue
         $(this).addClass("eProgress-done");
-        nxt();       
+        nxt(); // Reset delay      
     });
 }
 function resetResults() { // Reset everything to redo the test
