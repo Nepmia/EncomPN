@@ -123,10 +123,11 @@ function launchTest(){
     $(".transf").delay(10000).queue(function(nxt) {
         $(this).addClass("eProgress-done");
         $(".eTime-virt").removeClass("ec-elt-off"); // make seconds appear
-        $(".eTime-transf").delay(transf).queue(function(){ 
+        $(".eTime-transf").delay(transf).queue(function(nxt){ 
             $(".eTime-transf").removeClass("ec-elt-off");  // make seconds appear
             $(".eTime-totime").removeClass("ec-elt-off");  // make seconds appear
             $(".speedTestRetry").removeClass("disabled"); // Enable Retry btn
+            nxt();
         });
         nxt();
     });
