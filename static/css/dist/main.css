@@ -446,6 +446,12 @@ body::-webkit-scrollbar-thumb:focus {
   .sec-resp {
     margin: 10px;
   }
+  .eProgress-50 {
+    width: 30% !important;
+  }
+  .eProgress-100 {
+    width: 60% !important;
+  }
   .eProgress-done {
     width: 60% !important;
   }
@@ -489,6 +495,12 @@ body::-webkit-scrollbar-thumb:focus {
     text-align: left;
   }
   .eProgress-done {
+    width: 90% !important;
+  }
+  .eProgress-50 {
+    width: 45% !important;
+  }
+  .eProgress-100 {
     width: 90% !important;
   }
 }

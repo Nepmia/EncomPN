@@ -102,7 +102,7 @@ function launchTest(){
     $(".speedTestRetry").addClass("disabled"); // Disable Retry btn
     $(".test-title").text("From " + from + " to " + to); // Set test title to correct values
     var virt = 10 // virt time contant 
-    var transf = Math.random() * (0.99 - 0.01) + 0.01; // Random number between 0.01 and 0.99
+    var transf = Math.random() * (10 - 5) + 0.01; // Random number between 0 and 5 with min of 0.01
     var totime = virt + transf; // Adition of transf and virt
     $(".eTime-virt").text(virt + " s"); // Give text to result in seconds
     $(".eTime-transf").text(transf.toFixed(2) + " s"); // Give text to result in seconds + formating so it doesn't have more than 2 decimals
@@ -114,30 +114,43 @@ function launchTest(){
 
     $(".virt").css("transition", virt + "s ease"); // Give transition time to cursor
     $(".transf").css("transition", transf.toFixed(2) + "s ease"); // Give transition time to cursor
-    $(".totime").css("transition", 10 + transf + "s ease"); // Give transition time to cursor
+    $(".totime").css("transition", 10 + "s ease"); // Give const transition time to cursor
     
     $(".virt").delay(0).queue(function(nxt) { // Launch cursor with queue
         $(this).addClass("eProgress-done");
         nxt(); // Reset delay
     });
+    
+    $(".totime").delay(0).queue(function(nxt) { // Launch cursor with queue
+        $(this).addClass("eProgress-50");
+        nxt(); // Reset delay      
+    });
+    
+    $(".totime").delay(10000).queue(function(nxt) { // Launch cursor with queue
+        $(this).css("transition", transf + "s ease");
+        $(this).addClass("eProgress-100");
+        nxt(); // Reset delay      
+    });
+
+    let total_time = 10000 + ( transf * 1000)
+    // Make results appear
     $(".transf").delay(10000).queue(function(nxt) {
         $(this).addClass("eProgress-done");
         $(".eTime-virt").removeClass("ec-elt-off"); // make seconds appear
-        $(".eTime-transf").delay(transf).queue(function(nxt){ 
-            $(".eTime-transf").removeClass("ec-elt-off");  // make seconds appear
-            $(".eTime-totime").removeClass("ec-elt-off");  // make seconds appear
-            $(".speedTestRetry").removeClass("disabled"); // Enable Retry btn
-            nxt(); // Reset delay
-        });
         nxt(); // Reset delay
     });
-    $(".totime").delay(0).queue(function(nxt) { // Launch cursor with queue
-        $(this).addClass("eProgress-done");
-        nxt(); // Reset delay      
+    
+    $(".eTime-transf").delay(total_time).queue(function(nxt){ 
+        console.log(total_time);
+        $(".eTime-transf").removeClass("ec-elt-off");  // make seconds appear
+        $(".eTime-totime").removeClass("ec-elt-off");  // make seconds appear
+        $(".speedTestRetry").removeClass("disabled"); // Enable Retry btn
+        nxt(); // Reset delay
     });
+
 }
 function resetResults() { // Reset everything to redo the test
-    $(".virt, .transf, .totime").css("transition", "0s ease").removeClass("eProgress-done");
+    $(".virt, .transf, .totime").css("transition", "0s ease").removeClass(["eProgress-50", "eProgress-100", "eProgress-done"]);
     $(".eTime-virt, .eTime-transf, .eTime-totime").addClass("ec-elt-off");
 }
 
